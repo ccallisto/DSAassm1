@@ -1,0 +1,1 @@
+food_salesservice.adb:7:14: error: missing body for "SaleCounter" declared at food_salesservice.ads:7
