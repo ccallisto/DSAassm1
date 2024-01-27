@@ -1,7 +1,4 @@
 V "GNAT Lib v13"
-A -gnatA
-A -mtune=generic
-A -march=x86-64
 P SS ZX
 
 RN

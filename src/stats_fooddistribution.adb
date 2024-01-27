@@ -1,4 +1,4 @@
- package body Stats_FoodDistribution is  -- Step function
+package body Stats_FoodDistribution is  -- Step function
 
    -- 33.3% of grain/vegetable food packs require 0.25 hours preparation for sales.
    -- 56.7% of grain/vegetable food packs require 0.66 hours preparation for sales.

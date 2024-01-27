@@ -11,7 +11,7 @@ package body CircularQue is
    box: array(slotindex) of message; -- circular bufferiSSSSS
    maxMessages: Natural := capacity - 1; -- Integers >= 0.
 
-   procedure acceptMessage(msg: in message) is  -- ** modify for placing in dual stacks
+   procedure acceptMessage(msg: in message) is  -- ** modify  placing in dual stacks
    begin
        if mesnum < maxMessages then  -- reserve space and insert msg.
          rear := (rear + 1) mod capacity;  -- implement wrap-around.

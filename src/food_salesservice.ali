@@ -1,7 +1,4 @@
 V "GNAT Lib v13"
-A -gnatA
-A -mtune=generic
-A -march=x86-64
 P ZX
 
 RN
@@ -19,7 +16,6 @@ RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
-RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
 U food_salesservice%b	food_salesservice.adb	beae58af OO PK
@@ -92,7 +88,7 @@ D a-tiinau.adb		20231205000000 199a0c7a ada.text_io.integer_aux%b
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D circularque.ads	20240124170250 93000bac circularque%s
+D circularque.ads	20240122042406 93000bac circularque%s
 D food_datastructures.ads  20240122042406 a09482b6 food_datastructures%s
 D food_salesservice.ads	20240122042406 ef36e4fb food_salesservice%s
 D food_salesservice.adb	20240123204308 00ceebf0 food_salesservice%b

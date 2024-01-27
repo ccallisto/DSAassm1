@@ -1,7 +1,4 @@
 V "GNAT Lib v13"
-A -gnatA
-A -mtune=generic
-A -march=x86-64
 P ZX
 
 RN
@@ -14,7 +11,6 @@ RV NO_RELATIVE_DELAY
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
-RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
 U distribution_service%b  distribution_service.adb  2a5285e6 OO PK
@@ -67,7 +63,7 @@ D a-tienio.ads		20231205000000 107ce547 ada.text_io.enumeration_io%s
 D a-tiflio.ads		20231205000000 9fe024a2 ada.text_io.float_io%s
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D circularque.ads	20240124170250 93000bac circularque%s
+D circularque.ads	20240122042406 93000bac circularque%s
 D distribution_service.ads  20240122042406 e4fa9b10 distribution_service%s
 D distribution_service.adb  20240122042406 cff3c9ca distribution_service%b
 D food_datastructures.ads  20240122042406 a09482b6 food_datastructures%s

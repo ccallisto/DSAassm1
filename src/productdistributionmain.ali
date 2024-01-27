@@ -1,40 +1,37 @@
 V "GNAT Lib v13"
-A -gnatA
-A -mtune=generic
-A -march=x86-64
-P ZX
+M P W=b
+P SS ZX
 
 RN
-RV NO_DELAY
 RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
-RV NO_FIXED_POINT
-RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
-RV NO_RELATIVE_DELAY
+RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_HIERARCHY
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
-RV NO_IMPLEMENTATION_PRAGMAS
-RV NO_ELABORATION_CODE
+RV NO_IMPLICIT_LOOPS
+RV MAX_TASKS=1+
 
-U food_salesservice%b	food_salesservice.adb	beae58af OO PK
+U productdistributionmain%b  productdistributionmain.adb  8b5874e3 NE OO SU
 W ada%s			ada.ads			ada.ali
-Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.text_io.generic_aux%s  a-tigeau.adb	a-tigeau.ali
 Z ada.text_io.integer_aux%s
 Z ada.text_io.integer_io%s
+W distribution_service%s  distribution_service.adb  distribution_service.ali
 W food_datastructures%s	food_datastructures.adb	food_datastructures.ali
+W food_salesservice%s	food_salesservice.adb	food_salesservice.ali
 W gatekeeperservice%s	gatekeeperservice.adb	gatekeeperservice.ali
 W stats_fooddistribution%s  stats_fooddistribution.adb  stats_fooddistribution.ali
-Z system%s		system.ads		system.ali
+W system%s		system.ads		system.ali
 Z system.img_biu%s	s-imgbiu.ads		s-imgbiu.ali
 Z system.img_int%s	s-imgint.ads		s-imgint.ali
 Z system.img_llb%s	s-imgllb.ads		s-imgllb.ali
@@ -44,31 +41,17 @@ Z system.img_llli%s	s-imgllli.ads		s-imgllli.ali
 Z system.img_lllw%s	s-imglllw.ads		s-imglllw.ali
 Z system.img_llw%s	s-imgllw.ads		s-imgllw.ali
 Z system.img_wiu%s	s-imgwiu.ads		s-imgwiu.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
-Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 Z system.val_int%s	s-valint.ads		s-valint.ali
 Z system.val_lli%s	s-vallli.ads		s-vallli.ali
 Z system.val_llli%s	s-valllli.ads		s-valllli.ali
 
-U food_salesservice%s	food_salesservice.ads	1414e2f8 EE NE OO PK
-Z ada.real_time%s	a-reatim.adb		a-reatim.ali
-Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
-W food_datastructures%s	food_datastructures.adb	food_datastructures.ali
-W stats_fooddistribution%s  stats_fooddistribution.adb  stats_fooddistribution.ali
-Z system%s		system.ads		system.ali
-Z system.parameters%s	s-parame.adb		s-parame.ali
-Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
-Z system.tasking%s	s-taskin.adb		s-taskin.ali
-Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
-
 D ada.ads		20231205000000 76789da1 ada%s
 D a-assert.ads		20231205000000 ba465f5c ada.assertions%s
-D a-calend.ads		20231205000000 f55c50a3 ada.calendar%s
-D a-caldel.ads		20231205000000 9f20b83d ada.calendar.delays%s
 D a-except.ads		20231205000000 2a7d8d70 ada.exceptions%s
-D a-finali.ads		20231205000000 bf4f806b ada.finalization%s
 D a-flteio.ads		20231205000000 e18a47a0 ada.float_text_io%s
 D a-inteio.ads		20231205000000 f64b89a4 ada.integer_text_io%s
 D a-ioexce.ads		20231205000000 40018c65 ada.io_exceptions%s
@@ -92,14 +75,15 @@ D a-tiinau.adb		20231205000000 199a0c7a ada.text_io.integer_aux%b
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D circularque.ads	20240124170250 93000bac circularque%s
+D circularque.ads	20240122042406 93000bac circularque%s
+D distribution_service.ads  20240122042406 e4fa9b10 distribution_service%s
 D food_datastructures.ads  20240122042406 a09482b6 food_datastructures%s
 D food_salesservice.ads	20240122042406 ef36e4fb food_salesservice%s
-D food_salesservice.adb	20240123204308 00ceebf0 food_salesservice%b
 D gatekeeperservice.ads	20240122042406 f65830f4 gatekeeperservice%s
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-c.ads		20231205000000 5c5a6c17 interfaces.c%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
+D productdistributionmain.adb  20240122042645 d1c25cac productdistributionmain%b
 D stats_fooddistribution.ads  20240122042406 5bb684b5 stats_fooddistribution%s
 D system.ads		20231205000000 426dafb8 system%s
 D s-atacco.ads		20231205000000 903317eb system.address_to_access_conversions%s
@@ -108,7 +92,6 @@ D s-casuti.ads		20231205000000 cf13d755 system.case_util%s
 D s-crtl.ads		20231205000000 8a0692f8 system.crtl%s
 D s-exctab.ads		20231205000000 91bef6ef system.exception_table%s
 D s-ficobl.ads		20231205000000 dc5161d4 system.file_control_block%s
-D s-finroo.ads		20231205000000 4ff27390 system.finalization_root%s
 D s-imageb.ads		20231205000000 3953e0e6 system.image_b%s
 D s-imagei.ads		20231205000000 c707dfd0 system.image_i%s
 D s-imagew.ads		20231205000000 9d2dd267 system.image_w%s
@@ -139,9 +122,6 @@ D s-tasinf.ads		20231205000000 528dde74 system.task_info%s
 D s-taspri.ads		20231205000000 4ec891e7 system.task_primitives%s
 D s-taprop.ads		20231205000000 6eefbe12 system.task_primitives.operations%s
 D s-taskin.ads		20231205000000 0ec7ab0b system.tasking%s
-D s-taprob.ads		20231205000000 acd6094d system.tasking.protected_objects%s
-D s-tpoben.ads		20231205000000 60ad3dae system.tasking.protected_objects.entries%s
-D s-tasren.ads		20231205000000 a67a9949 system.tasking.rendezvous%s
 D s-tassta.ads		20231205000000 cca55c94 system.tasking.stages%s
 D s-traent.ads		20231205000000 c81cbf8c system.traceback_entries%s
 D s-unstyp.ads		20231205000000 fa2a7f59 system.unsigned_types%s
@@ -162,58 +142,40 @@ D s-widllu.ads		20231205000000 a6620b19 system.wid_llu%s
 D s-widuns.ads		20231205000000 866a5800 system.wid_uns%s
 D s-widthu.ads		20231205000000 b32f15e2 system.width_u%s
 G a e
-G c Z s b [retailsales food_salesservice 5 14 none]
-G c Z s s [retailsalesVIP food_salesservice 5 4 none]
-G c Z b b [get food_salesservice__integer_io 51 14 9_4]
-G c Z b b [get food_salesservice__integer_io 60 14 9_4]
-G c Z b b [put food_salesservice__integer_io 70 14 9_4]
-G c Z b b [put food_salesservice__integer_io 83 14 9_4]
-G c Z b b [get food_salesservice__integer_io 94 14 9_4]
-G c Z b b [put food_salesservice__integer_io 102 14 9_4]
-G c Z b b [get food_salesservice__integer_io__aux_int 55 14 48_4_9_4]
-G c Z b b [gets food_salesservice__integer_io__aux_int 60 14 48_4_9_4]
-G c Z b b [put food_salesservice__integer_io__aux_int 65 14 48_4_9_4]
-G c Z b b [puts food_salesservice__integer_io__aux_int 71 14 48_4_9_4]
-G c Z b b [get food_salesservice__integer_io__aux_lli 55 14 56_4_9_4]
-G c Z b b [gets food_salesservice__integer_io__aux_lli 60 14 56_4_9_4]
-G c Z b b [put food_salesservice__integer_io__aux_lli 65 14 56_4_9_4]
-G c Z b b [puts food_salesservice__integer_io__aux_lli 71 14 56_4_9_4]
-G c Z b b [get food_salesservice__integer_io__aux_llli 55 14 64_4_9_4]
-G c Z b b [gets food_salesservice__integer_io__aux_llli 60 14 64_4_9_4]
-G c Z b b [put food_salesservice__integer_io__aux_llli 65 14 64_4_9_4]
-G c Z b b [puts food_salesservice__integer_io__aux_llli 71 14 64_4_9_4]
-G r r none [retailsales food_salesservice 5 14 none] [retrievemessage gatekeeperservice__gatekeeper 12 13 none]
-G r c none [retailsales food_salesservice 5 14 none] [next_exponential stats_fooddistribution 14 13 none]
-G r c none [retailsales food_salesservice 5 14 none] [printfood_pack food_datastructures 17 14 none]
+G c Z b b [productdistributionmain standard 14 11 none]
+G r s product_generator [productdistributionmain standard 14 11 none] [product_generatorVIP distribution_service 6 4 none]
+G r s retailsales [productdistributionmain standard 14 11 none] [retailsalesVIP food_salesservice 5 4 none]
+G r q none [productdistributionmain standard 14 11 none] [product_generator distribution_service 6 14 none]
+G r q none [productdistributionmain standard 14 11 none] [retailsales food_salesservice 5 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 33|5r6 5r24 9r30
-X 21 a-textio.ads
-58K13*Text_IO 787e16 33|5w10 5r28 9r34
-282U14*New_Line 33|25s72 27s72
-519U14*Put 33|25s9 27s9
-X 27 a-tiinio.ads
-46k21*Integer_IO 114e27 33|9r42
-83U14 Put 33|27s56[9]
-X 31 food_datastructures.ads
-5K9*Food_DataStructures 40e25 32|1w6 33|1w6 1r32
-15R9*Food_Pack 38e14 33|13r13
-17U14*PrintFood_Pack 33|25s48
-X 32 food_salesservice.ads
-4K9*Food_SalesService 7l5 7e22 33|7b14 32l5 32t22
-5T14*RetailSales 33|12b14 30l7 30t18
-X 33 food_salesservice.adb
-9K12 Integer_IO[27|46] 10r8 27r45
-11i4 salecount{integer} 26m9 26r22 27r60
-13r7 food{31|15R9} 20m37 25r64
-14b7 availableForSale{boolean} 20m43
-X 34 gatekeeperservice.ads
-5K9*GateKeeperService 33|3w6 3r29 34|16e22
-7t8*GateKeeper 33|20r9
-12Y13 retrieveMessage 33|20s20
-X 38 stats_fooddistribution.ads
-6K9*Stats_FoodDistribution 32|2w6 2r35 33|2w6 2r35 38|21e28
-14V13*Next_Exponential{float} 33|23s26
-X 69 s-stausa.ads
+16K9*Ada 20e8 35|1r6 1r23 16r26
+X 18 a-textio.ads
+58K13*Text_IO 787e16 35|1w10 1r27 16r30
+282U14*New_Line 35|27s4 29s4
+519U14*Put 35|26s4 28s4
+X 24 a-tiinio.ads
+46k21*Integer_IO 114e27 35|16r38
+60U14 Get 35|26s43[16] 28s39[16]
+X 28 distribution_service.ads
+4K9*Distribution_Service 9e25 35|7w6 7r32
+6T14*Product_Generator 35|33r58
+X 29 food_datastructures.ads
+5K9*Food_DataStructures 40e25 35|3w6 3r32
+X 30 food_salesservice.ads
+4K9*Food_SalesService 7e22 35|9w6 9r30
+5T14*RetailSales 35|34r35
+X 31 gatekeeperservice.ads
+5K9*GateKeeperService 16e22 35|11w6 11r30
+X 35 productdistributionmain.adb
+14U11*ProductDistributionMain 14b11 39l5 39t28
+16K12 INt_IO[24|46] 16r63
+18i4 numProductGenerators{positive} 26m47 33r33
+19i4 numPOS{positive} 28m43 34r24
+33a10 FarmProducts(28|6T14)
+34a10 POS(30|5T14)
+X 36 stats_fooddistribution.ads
+6K9*Stats_FoodDistribution 35|5w6 5r35 36|21e28
+X 66 s-stausa.ads
 207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22
 272U14*Output_Results 276i<c,__gnat_stack_usage_output_results>22
 

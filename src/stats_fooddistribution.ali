@@ -1,7 +1,4 @@
 V "GNAT Lib v13"
-A -gnatA
-A -mtune=generic
-A -march=x86-64
 P ZX
 
 RN
@@ -9,7 +6,6 @@ RV NO_FIXED_POINT
 RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_DEFAULT_INITIALIZATION
-RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
 U stats_fooddistribution%b  stats_fooddistribution.adb  392e42e8 NE OO PK
@@ -47,7 +43,7 @@ D food_datastructures.ads  20240122042406 a09482b6 food_datastructures%s
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
 D stats_fooddistribution.ads  20240122042406 5bb684b5 stats_fooddistribution%s
-D stats_fooddistribution.adb  20240124164642 6298c65d stats_fooddistribution%b
+D stats_fooddistribution.adb  20240122042406 6298c65d stats_fooddistribution%b
 D system.ads		20231205000000 426dafb8 system%s
 D s-crtl.ads		20231205000000 8a0692f8 system.crtl%s
 D s-exctab.ads		20231205000000 91bef6ef system.exception_table%s
@@ -86,7 +82,7 @@ X 14 a-textio.ads
 X 19 food_datastructures.ads
 5K9*Food_DataStructures 40e25 22|4w6 4r31
 X 22 stats_fooddistribution.ads
-6K9*Stats_FoodDistribution 21l6 21e28 23|1b14 95l6 95t28
+6K9*Stats_FoodDistribution 21l6 21e28 23|1b15 95l6 95t28
 10r4*my_Generator{8|47R9} 23|10r27 29r27 43r16
 14V13*Next_Exponential{float} 23|40b12 93l7 93t23
 17V13*PrepareGrainVegetableFood_PackforSales{duration} 23|7b13 19l8 19t46

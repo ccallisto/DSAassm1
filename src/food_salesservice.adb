@@ -8,13 +8,14 @@ package body Food_SalesService is
 
    package Integer_IO is new Ada.Text_IO.Integer_IO(Integer);
    use Integer_IO;
-
+   salecount: Integer := 0;
    task body RetailSales is
       food: Food_Pack;
       availableForSale: Boolean := true;
-      salecount: Integer := 0;
+
    begin
-     delay 1.0;  -- Allow for initialization activities.
+      delay 1.0;  -- Allow for initialization activities.
+
      loop
         GateKeeper.retrieveMessage( food, availableForSale );
 
@@ -23,6 +24,7 @@ package body Food_SalesService is
 
         put("Retail Sales successfuly sold "); PrintFood_Pack( food ); new_line;
         salecount := salecount + 1;
+        put("Current Total Weekly Sales "); Integer_IO.Put(salecount); new_line;
 
       end loop;
   end RetailSales;
