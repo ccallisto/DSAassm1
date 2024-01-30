@@ -60,7 +60,7 @@ D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
 D circularque.ads	20240124170250 93000bac circularque%s
-D circularque.adb	20240124164948 647d54cc circularque%b
+D circularque.adb	20240130160244 647d54cc circularque%b
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
 D system.ads		20231205000000 426dafb8 system%s

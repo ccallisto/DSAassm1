@@ -30,11 +30,15 @@ package Food_DataStructures is
 
    function RandomFoodType return Food_Type;
    procedure PrintFoodType( typeFood: Food_Type );
+   function "<" (Left, Right : Food_Type) return Boolean;
+   function ">" (Left, Right : Food_Type) return Boolean;
+   function "=" (Left, Right: Food_Type) return Boolean;
 
 private
    type Food_Pack is record
          aFoodType: Food_Type := Fowl;
          aFoodShipment: Character := 'M';
    end record;
+
 
  end Food_DataStructures;

@@ -40,7 +40,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#8b5874e3#;
+   u00001 : constant Version_32 := 16#aabba3fc#;
    pragma Export (C, u00001, "productdistributionmainB");
    u00002 : constant Version_32 := 16#7320ff5f#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -308,9 +308,9 @@ package ada_main is
    pragma Export (C, u00133, "ada__text_io__generic_auxB");
    u00134 : constant Version_32 := 16#ba6faca0#;
    pragma Export (C, u00134, "ada__text_io__generic_auxS");
-   u00135 : constant Version_32 := 16#2a5285e6#;
+   u00135 : constant Version_32 := 16#0bb152f9#;
    pragma Export (C, u00135, "distribution_serviceB");
-   u00136 : constant Version_32 := 16#1fd89d13#;
+   u00136 : constant Version_32 := 16#3e3b4a0c#;
    pragma Export (C, u00136, "distribution_serviceS");
    u00137 : constant Version_32 := 16#87ec1338#;
    pragma Export (C, u00137, "ada__calendar__delaysB");
@@ -408,9 +408,9 @@ package ada_main is
    pragma Export (C, u00183, "system__random_seedB");
    u00184 : constant Version_32 := 16#563f4d49#;
    pragma Export (C, u00184, "system__random_seedS");
-   u00185 : constant Version_32 := 16#d61e7109#;
+   u00185 : constant Version_32 := 16#142c5623#;
    pragma Export (C, u00185, "food_datastructuresB");
-   u00186 : constant Version_32 := 16#a53c3c16#;
+   u00186 : constant Version_32 := 16#84dfeb09#;
    pragma Export (C, u00186, "food_datastructuresS");
    u00187 : constant Version_32 := 16#b9e97595#;
    pragma Export (C, u00187, "ada__text_io__enumeration_auxB");
@@ -420,7 +420,7 @@ package ada_main is
    pragma Export (C, u00189, "system__val_enum_8S");
    u00190 : constant Version_32 := 16#56ea0cb9#;
    pragma Export (C, u00190, "gatekeeperserviceB");
-   u00191 : constant Version_32 := 16#9e7a3d5b#;
+   u00191 : constant Version_32 := 16#bf99ea44#;
    pragma Export (C, u00191, "gatekeeperserviceS");
    u00192 : constant Version_32 := 16#f77d5f60#;
    pragma Export (C, u00192, "circularqueB");
@@ -548,11 +548,11 @@ package ada_main is
    pragma Export (C, u00253, "ada__real_timeS");
    u00254 : constant Version_32 := 16#392e42e8#;
    pragma Export (C, u00254, "stats_fooddistributionB");
-   u00255 : constant Version_32 := 16#f099022e#;
+   u00255 : constant Version_32 := 16#d17ad531#;
    pragma Export (C, u00255, "stats_fooddistributionS");
-   u00256 : constant Version_32 := 16#beae58af#;
+   u00256 : constant Version_32 := 16#9f4d8fb0#;
    pragma Export (C, u00256, "food_salesserviceB");
-   u00257 : constant Version_32 := 16#1414e2f8#;
+   u00257 : constant Version_32 := 16#35f735e7#;
    pragma Export (C, u00257, "food_salesserviceS");
    u00258 : constant Version_32 := 16#1982dcd0#;
    pragma Export (C, u00258, "system__memoryB");
