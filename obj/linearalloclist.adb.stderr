@@ -1,7 +1,2 @@
-linearalloclist.adb:6:04: error: statement not allowed in declarative part
-linearalloclist.adb:54:06: error: statement not allowed in declarative part
-linearalloclist.adb:64:05: error: missing "end if;" for "if" at line 56
-linearalloclist.adb:67:05: error: misplaced "return" statement
-linearalloclist.adb:69:05: error: no "begin" for this "end"
-linearalloclist.adb:70:03: error: declarations mixed with statements is a GNAT-specific extension
-linearalloclist.adb:70:03: error: unit must be compiled with -gnatX0 or use pragma Extensions_Allowed (All)
+linearalloclist.adb:33:29: error: expected type "foodarray" defined at linearalloclist.ads:9
+linearalloclist.adb:33:29: error: found private type "Food_Pack" defined at food_datastructures.ads:15

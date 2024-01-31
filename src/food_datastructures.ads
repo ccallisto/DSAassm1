@@ -30,9 +30,9 @@ package Food_DataStructures is
 
    function RandomFoodType return Food_Type;
    procedure PrintFoodType( typeFood: Food_Type );
-   function "<" (Left, Right : Food_Type) return Boolean;
-   function ">" (Left, Right : Food_Type) return Boolean;
-   function "=" (Left, Right: Food_Type) return Boolean;
+   function lessthan (Left, Right : Food_Type) return Boolean;
+   function greaterthan (Left, Right : Food_Type) return Boolean;
+   function equalto (Left, Right: Food_Type) return Boolean;
 
 private
    type Food_Pack is record

@@ -3,9 +3,7 @@ with Food_DataStructures ;use Food_DataStructures;
 
 package body LinearAllocList is
 
-   capacity := 21;
-   subtype slotindex is natural range 0 ..(capacity -1);
-   first, last: slotindex := 0;
+   first, last, pos: slotindex := 0;
    mesnum : Natural range 0..(Capacity-1):= 0;
    box : array(slotindex) of Food_Pack;
    max: Natural := capacity -1;
@@ -13,7 +11,7 @@ package body LinearAllocList is
    procedure insert(msg: in Food_Pack) is
       begin
    pos := last;
-   while pos > 0 and then box(pos - 1) > msg loop
+   while pos > 0 and then greaterthan(getFood_PackFoodType(box(pos - 1)), getFood_PackFoodType(msg)) loop
       box(pos) := box(pos - 1); -- Shift elements to the right
       pos := pos - 1;
    end loop;
@@ -21,42 +19,52 @@ package body LinearAllocList is
    box(pos):= msg;
 
       last := last + 1;
-      if listFull = True then
+      if isFull then
         put("ERROR - Message rejected - list is full!"); new_line(2);
     end if;
    end insert;
    
-   procedure retrieve(target :in Food_Pack; outitem : out Food_Pack)is
-   begin
-      index := slotindex;
+procedure retrieve(target : in Food_Pack; outitem: out Food_Pack) is
+      index : slotindex;
       
-      if not isEmpty then
-      
-         index := BinarySearch(box, target);
-           
-         -- if binarysearch finds an index (not -1?) then remove that value
-         -- else send the index 0 and shift everything backward
-         for i in 0..index
-         loop
-            box(pos-1) := box(pos);
+begin
+   if not isEmpty then
+      -- Find the index of the target item
+      index := BinarySearch(box, target);
+
+      -- Check if the item was found
+      if index /= slotindex'First then  -- Assuming slotindex'First is your 'not found' indicator
+         -- Set the out parameter
+         outitem := box(index);
+
+         -- Shift elements in the array
+         for i in index .. last - 2 loop
+            box(i) := box(i + 1);
          end loop;
-         
-         
+
+         -- Adjust the 'last' pointer
+         last := last - 1;
+      else
+         -- Item not found, handle accordingly
+         outitem := box(0);  -- Or however you wish to handle this case
       end if;
-      --implement binarysearch to find particular index here
-   end retrieve;
+   else
+      outitem := box(0);  -- Or however you wish to handle this case
+   end if;
+end retrieve;
    
-   function BinarySearch(box: in foodarray; Target: in Food_Pack) return slotindex;    
+   function BinarySearch(box: in foodarray; Target: in Food_Pack) return slotindex is
+    
     low : slotindex := 0;
     high : slotindex := last - 1;
     middle : slotindex;
-    
+    begin
      while low <= high loop
          middle := (low+high)/2;
-      if box(middle)> target then
+      if greaterthan(getFood_PackFoodType(box(middle)), getFood_PackFoodType(target)) then
             high := middle-1;
             
-      else if box(middle) < target then
+      elsif lessthan(getFood_PackFoodType(box(middle)), getFood_PackFoodType(target))then
             low := middle + 1;
       else 
             return middle;  
