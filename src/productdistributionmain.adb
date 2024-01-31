@@ -10,7 +10,6 @@ with Food_SalesService;  use Food_SalesService;
 
 with GateKeeperService;  use GateKeeperService;
 
-with LinearAllocList; use LinearAllocList;
 
 procedure ProductDistributionMain is
 

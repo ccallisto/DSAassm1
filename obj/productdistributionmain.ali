@@ -22,7 +22,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV MAX_TASKS=1+
 
-U productdistributionmain%b  productdistributionmain.adb  96ecc086 NE OO SU
+U productdistributionmain%b  productdistributionmain.adb  78b1db0d NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -34,7 +34,6 @@ W distribution_service%s  distribution_service.adb  distribution_service.ali
 W food_datastructures%s	food_datastructures.adb	food_datastructures.ali
 W food_salesservice%s	food_salesservice.adb	food_salesservice.ali
 W gatekeeperservice%s	gatekeeperservice.adb	gatekeeperservice.ali
-W linearalloclist%s	linearalloclist.adb	linearalloclist.ali
 W stats_fooddistribution%s  stats_fooddistribution.adb  stats_fooddistribution.ali
 W system%s		system.ads		system.ali
 Z system.img_biu%s	s-imgbiu.ads		s-imgbiu.ali
@@ -80,16 +79,15 @@ D a-tiinau.adb		20231205000000 199a0c7a ada.text_io.integer_aux%b
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D circularque.ads	20240124170250 93000bac circularque%s
+D circularque.ads	20240131204920 88d0461e circularque%s
 D distribution_service.ads  20240122042406 e4fa9b10 distribution_service%s
-D food_datastructures.ads  20240131152750 7fa5c487 food_datastructures%s
+D food_datastructures.ads  20240131203248 537d2d58 food_datastructures%s
 D food_salesservice.ads	20240122042406 ef36e4fb food_salesservice%s
 D gatekeeperservice.ads	20240122042406 f65830f4 gatekeeperservice%s
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-c.ads		20231205000000 5c5a6c17 interfaces.c%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
-D linearalloclist.ads	20240130195148 c10c312b linearalloclist%s
-D productdistributionmain.adb  20240130194108 d24b9fd3 productdistributionmain%b
+D productdistributionmain.adb  20240131204939 d1c25cac productdistributionmain%b
 D stats_fooddistribution.ads  20240122042406 5bb684b5 stats_fooddistribution%s
 D system.ads		20231205000000 426dafb8 system%s
 D s-atacco.ads		20231205000000 903317eb system.address_to_access_conversions%s
@@ -148,42 +146,40 @@ D s-widllu.ads		20231205000000 a6620b19 system.wid_llu%s
 D s-widuns.ads		20231205000000 866a5800 system.wid_uns%s
 D s-widthu.ads		20231205000000 b32f15e2 system.width_u%s
 G a e
-G c Z b b [productdistributionmain standard 15 11 none]
-G r s product_generator [productdistributionmain standard 15 11 none] [product_generatorVIP distribution_service 6 4 none]
-G r s retailsales [productdistributionmain standard 15 11 none] [retailsalesVIP food_salesservice 5 4 none]
-G r q none [productdistributionmain standard 15 11 none] [product_generator distribution_service 6 14 none]
-G r q none [productdistributionmain standard 15 11 none] [retailsales food_salesservice 5 14 none]
+G c Z b b [productdistributionmain standard 14 11 none]
+G r s product_generator [productdistributionmain standard 14 11 none] [product_generatorVIP distribution_service 6 4 none]
+G r s retailsales [productdistributionmain standard 14 11 none] [retailsalesVIP food_salesservice 5 4 none]
+G r q none [productdistributionmain standard 14 11 none] [product_generator distribution_service 6 14 none]
+G r q none [productdistributionmain standard 14 11 none] [retailsales food_salesservice 5 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 36|1r6 1r23 17r26
+16K9*Ada 20e8 35|1r6 1r23 16r26
 X 18 a-textio.ads
-58K13*Text_IO 787e16 36|1w10 1r27 17r30
-282U14*New_Line 36|28s4 30s4
-519U14*Put 36|27s4 29s4
+58K13*Text_IO 787e16 35|1w10 1r27 16r30
+282U14*New_Line 35|27s4 29s4
+519U14*Put 35|26s4 28s4
 X 24 a-tiinio.ads
-46k21*Integer_IO 114e27 36|17r38
-60U14 Get 36|27s43[17] 29s39[17]
+46k21*Integer_IO 114e27 35|16r38
+60U14 Get 35|26s43[16] 28s39[16]
 X 28 distribution_service.ads
-4K9*Distribution_Service 9e25 36|7w6 7r32
-6T14*Product_Generator 36|34r58
+4K9*Distribution_Service 9e25 35|7w6 7r32
+6T14*Product_Generator 35|33r58
 X 29 food_datastructures.ads
-5K9*Food_DataStructures 44e25 36|3w6 3r32
+5K9*Food_DataStructures 40e25 35|3w6 3r32
 X 30 food_salesservice.ads
-4K9*Food_SalesService 7e22 36|9w6 9r30
-5T14*RetailSales 36|35r35
+4K9*Food_SalesService 7e22 35|9w6 9r30
+5T14*RetailSales 35|34r35
 X 31 gatekeeperservice.ads
-5K9*GateKeeperService 16e22 36|11w6 11r30
-X 35 linearalloclist.ads
-4K9*LinearAllocList 19e20 36|13w6 13r27
-X 36 productdistributionmain.adb
-15U11*ProductDistributionMain 15b11 40l5 40t28
-17K12 INt_IO[24|46] 17r63
-19i4 numProductGenerators{positive} 27m47 34r33
-20i4 numPOS{positive} 29m43 35r24
-34a10 FarmProducts(28|6T14)
-35a10 POS(30|5T14)
-X 37 stats_fooddistribution.ads
-6K9*Stats_FoodDistribution 36|5w6 5r35 37|21e28
-X 67 s-stausa.ads
+5K9*GateKeeperService 16e22 35|11w6 11r30
+X 35 productdistributionmain.adb
+14U11*ProductDistributionMain 14b11 39l5 39t28
+16K12 INt_IO[24|46] 16r63
+18i4 numProductGenerators{positive} 26m47 33r33
+19i4 numPOS{positive} 28m43 34r24
+33a10 FarmProducts(28|6T14)
+34a10 POS(30|5T14)
+X 36 stats_fooddistribution.ads
+6K9*Stats_FoodDistribution 35|5w6 5r35 36|21e28
+X 66 s-stausa.ads
 207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22
 272U14*Output_Results 276i<c,__gnat_stack_usage_output_results>22
 

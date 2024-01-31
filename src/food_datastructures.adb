@@ -38,20 +38,6 @@
 
    procedure PrintFoodType( typeFood: Food_Type ) is
    begin put("Type food is: ");  put( typeFood ); new_line(1); end PrintFoodType;
-   
-   function lessthan (Left, Right : Food_Type) return Boolean is
-    begin
-        return Food_Type'Pos(Left) < Food_Type'Pos(Right);
-    end lessthan;
 
-   function greaterthan (Left, Right : Food_Type) return Boolean is
-    begin
-        return Food_Type'Pos(Left) > Food_Type'Pos(Right);
-    end greaterthan;
-
-   function equalto (Left, Right : Food_Type) return Boolean is
-    begin
-        return Food_Type'Pos(Left) = Food_Type'Pos(Right);
-    end equalto;
 
   end Food_DataStructures;

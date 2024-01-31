@@ -28,11 +28,7 @@ package Food_DataStructures is
 
    procedure setFood_PackShipment( FoodIn: in out Food_Pack; FoodShipment: Character );
 
-   function RandomFoodType return Food_Type;
-   procedure PrintFoodType( typeFood: Food_Type );
-   function lessthan (Left, Right : Food_Type) return Boolean;
-   function greaterthan (Left, Right : Food_Type) return Boolean;
-   function equalto (Left, Right: Food_Type) return Boolean;
+
 
 private
    type Food_Pack is record

@@ -1,0 +1,1 @@
+distribution_service.adb:23:60: error: "RandomFoodType" not declared in "Food_DataStructures"

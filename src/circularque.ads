@@ -14,8 +14,5 @@ generic
 
    function circularQueFull return Boolean;
 
-   --Add method (function or procedure) for inserting at front of queue here and in body.
-   procedure Enqueue(msg: in message);
-
 
  end CircularQue;

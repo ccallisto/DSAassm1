@@ -1,19 +1,18 @@
-with Ada.Text_IO; use Ada.Text_IO;
-with Food_DataStructures; use Food_DataStructures;
-
-package LinearAllocList is
-
-   capacity : Natural := 21;
-   subtype slotindex is Natural range 0 .. capacity -1;
-    
-   type foodarray is array(slotindex) of Food_Pack;
+with Ada.text_IO; use Ada.Text_IO;
+generic 
+   type message is private;
+   
+package linearalloclist is
+   
+   procedure insert(msg: in message);
      
+   procedure remove(msg: in message);
+   
+   function get return Integer;
+   
    function isFull return Boolean;
+   
    function isEmpty return Boolean;
    
-   procedure insert(msg: in Food_Pack);
-   procedure retrieve(Target: in Food_Pack; outitem: out Food_Pack);
+end linearalloclist;
    
-   function BinarySearch(box: in foodarray; Target: in Food_Pack) return slotindex;
-
-end LinearAllocList;
