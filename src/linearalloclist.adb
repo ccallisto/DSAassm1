@@ -1,5 +1,12 @@
+with Food_DataStructures;
+use Food_DataStructures;
+
+
 package body linearalloclist is
-   
+    type message is record
+        food_type: Food_Type;
+        
+    end record;
    package IntIO is new Ada.Text_IO.Integer_IO(Integer);
     use IntIO;
 
@@ -16,7 +23,7 @@ package body linearalloclist is
       
       temp := last;
       if not (isFull) then
-         while temp >= first and list[temp] > msg loop --fill in dot operator for generic type here
+         while temp >= first and list[temp].food_type > msg.food_type loop --fill in dot operator for generic type here
             list[temp+1] = list[temp];
             temp := temp-1;
          end loop;
@@ -41,8 +48,21 @@ package body linearalloclist is
       end remove;
    
    function get return Integer is
+         lower_bound := first;
+         upper_bound := last;
       begin
-         
+         while lower_bound < upper_bound loop
+            index := (lower_bound + upper_bound)/2
+            if msg.food_type < list[index].food_type then
+               upper_bound := index-1;
+            elsif msg.food_type > list[index]
+               lower_bound := index + 1;
+            else
+            return index;
+            exit;
+            end if;
+         end loop;
+              
       return -1;
       end get;
    
