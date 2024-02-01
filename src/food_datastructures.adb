@@ -1,5 +1,4 @@
--- 
- package body Food_DataStructures is
+package body Food_DataStructures is
 
 
 
@@ -38,6 +37,5 @@
 
    procedure PrintFoodType( typeFood: Food_Type ) is
    begin put("Type food is: ");  put( typeFood ); new_line(1); end PrintFoodType;
-
 
   end Food_DataStructures;
