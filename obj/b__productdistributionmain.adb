@@ -50,10 +50,10 @@ package body ada_main is
    E241 : Short_Integer; pragma Import (Ada, E241, "system__tasking__protected_objects__entries_E");
    E245 : Short_Integer; pragma Import (Ada, E245, "system__tasking__queuing_E");
    E249 : Short_Integer; pragma Import (Ada, E249, "system__tasking__stages_E");
-   E193 : Short_Integer; pragma Import (Ada, E193, "circularque_E");
    E186 : Short_Integer; pragma Import (Ada, E186, "food_datastructures_E");
    E255 : Short_Integer; pragma Import (Ada, E255, "stats_fooddistribution_E");
    E191 : Short_Integer; pragma Import (Ada, E191, "gatekeeperservice_E");
+   E193 : Short_Integer; pragma Import (Ada, E193, "linearalloclist_E");
    E136 : Short_Integer; pragma Import (Ada, E136, "distribution_service_E");
    E257 : Short_Integer; pragma Import (Ada, E257, "food_salesservice_E");
 
@@ -306,12 +306,12 @@ package body ada_main is
       E245 := E245 + 1;
       System.Tasking.Stages'Elab_Body;
       E249 := E249 + 1;
-      E193 := E193 + 1;
       Food_Datastructures'Elab_Body;
       E186 := E186 + 1;
       Stats_Fooddistribution'Elab_Spec;
       E255 := E255 + 1;
       Gatekeeperservice'Elab_Spec;
+      E193 := E193 + 1;
       Gatekeeperservice'Elab_Body;
       E191 := E191 + 1;
       Distribution_Service'Elab_Body;
@@ -355,9 +355,9 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/circularque.o
    --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/food_datastructures.o
    --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/stats_fooddistribution.o
+   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/linearalloclist.o
    --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/gatekeeperservice.o
    --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/distribution_service.o
    --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/food_salesservice.o

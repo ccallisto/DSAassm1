@@ -1,14 +1,25 @@
 with Ada.Text_IO;  use Ada.Text_IO;
 with Ada.Calendar;  use Ada.Calendar;
-
+with linearalloclist;
 package body GateKeeperService is
-
+   
    package IntegerIO is new Ada.Text_IO.Integer_IO(Integer);  use IntegerIO;
-
+  
+            
    task body GateKeeper is
-
-      package CircularQueue is new CircularQue (Food_Pack); -- **  specify size for storage space.
-      use CircularQueue;
+      -- define getfoodtype and pass within the function below once passed i can use ame as one inlinearlist
+   function GetFoodType(msg : Food_Pack) return Food_Type is
+      begin 
+      return getFood_PackFoodType(msg);
+   end GetFoodType;
+      --return getfoodtype(msg)
+      
+      --instantiate package linearalloclist is new 
+   package LinearAllocListInstance is new linearalloclist(Food_Pack, GetFoodType);
+   use LinearAllocListInstance;
+      --  package linearalloclist is new linearalloclist(Food_Pack, GetFoodType); -- **  specify size for storage space.
+      --  use linearalloclist;
+                                                                            
 
       rejected: Integer := 0;
       -- Declare food packet counters here.
@@ -19,6 +30,7 @@ package body GateKeeperService is
       End_Time:   Ada.Calendar.Time;
 
    begin
+   
 
       delay 0.5;  -- allow 1/2 hour to initialize facility.
       Start_Time := Ada.Calendar.Clock;
@@ -42,9 +54,9 @@ package body GateKeeperService is
 
          select
             -- new arrivals of food
-            accept acceptMessage( newFood: in Food_Pack) do
-               if not( CircularQueFull ) then
-                  CircularQueue.acceptMessage( newFood);
+            accept insert(newFood: in Food_Pack) do
+               if not(LinearAllocListInstance.isFull) then
+                  LinearAllocListInstance.insert(newFood);
                   put("GateKeeper insert accepted ");
                   PrintFood_Pack( newFood ); new_line;
                else
@@ -54,16 +66,16 @@ package body GateKeeperService is
                   put(" Rejected = "); put(rejected);
                   put(". Sent to another distribution facility!"); new_line(3);
                end if;
-            end acceptMessage;
+            end insert;
          or
             -- Accept request for distribution from sales
-            accept retrieveMessage( newFood: out Food_Pack; availableForShipment: out Boolean) do
+            accept remove( newFood: out Food_Pack; availableForShipment: out Boolean) do
               availableForShipment := False;
 
-              if not(CircularQueue.circularQueEmpty) then
+              if not(LinearAllocListInstance.isEmpty) then
                  availableForShipment := True;
 
-                 CircularQueue.retrieveMessage( newFood );
+                 LinearAllocListInstance.remove(newFood);
 
                  MgtDesiredFoodTypeToSell := RandomFoodType;
                  put("Mgt Desired Food Type To Sell is: ");
@@ -72,7 +84,7 @@ package body GateKeeperService is
                  --PrintFood_PackShipment( newFood );
                  put("Food pack removed by GateKeeper for shipment."); new_line(2);
               end if;
-            end retrieveMessage;
+            end remove;
          end select;
 
          delay 1.1; -- Complete overhead due to accepting or rejecting a request prior to new iteration.

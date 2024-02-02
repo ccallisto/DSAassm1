@@ -1,2 +1,1 @@
-linearalloclist.adb:33:29: error: expected type "foodarray" defined at linearalloclist.ads:9
-linearalloclist.adb:33:29: error: found private type "Food_Pack" defined at food_datastructures.ads:15
+linearalloclist.adb:37:21: warning: formal parameter "msg" is read but never assigned [-gnatwv]

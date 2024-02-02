@@ -27,7 +27,7 @@ RV MAX_SELECT_ALTERNATIVES=2
 RV MAX_TASK_ENTRIES=2
 RV MAX_TASKS=1
 
-U gatekeeperservice%b	gatekeeperservice.adb	56ea0cb9 OO PK
+U gatekeeperservice%b	gatekeeperservice.adb	4278effb OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
@@ -37,9 +37,10 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.text_io.generic_aux%s  a-tigeau.adb	a-tigeau.ali
 Z ada.text_io.integer_aux%s
 Z ada.text_io.integer_io%s
-Z circularque%s		circularque.adb		circularque.ali  ED
 Z food_datastructures%s	food_datastructures.adb	food_datastructures.ali  AD
+Z gatekeeperservice%s	gatekeeperservice.adb	gatekeeperservice.ali
 Z interfaces%s		interfac.ads		interfac.ali
+W linearalloclist%s	linearalloclist.adb	linearalloclist.ali  ED
 Z system%s		system.ads		system.ali
 Z system.img_biu%s	s-imgbiu.ads		s-imgbiu.ali
 Z system.img_fixed_64%s	s-imfi64.ads		s-imfi64.ali
@@ -59,10 +60,9 @@ Z system.val_int%s	s-valint.ads		s-valint.ali
 Z system.val_lli%s	s-vallli.ads		s-vallli.ali
 Z system.val_llli%s	s-valllli.ads		s-valllli.ali
 
-U gatekeeperservice%s	gatekeeperservice.ads	414b7b6a EE OO PK
+U gatekeeperservice%s	gatekeeperservice.ads	35b435d8 EE OO PK
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
-W circularque%s		circularque.adb		circularque.ali
 W food_datastructures%s	food_datastructures.adb	food_datastructures.ali
 W stats_fooddistribution%s  stats_fooddistribution.adb  stats_fooddistribution.ali
 Z system%s		system.ads		system.ali
@@ -101,15 +101,15 @@ D a-tiinau.adb		20231205000000 199a0c7a ada.text_io.integer_aux%b
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D circularque.ads	20240124170250 93000bac circularque%s
-D circularque.adb	20240130160244 647d54cc circularque%b
-D food_datastructures.ads  20240131152750 7fa5c487 food_datastructures%s
-D gatekeeperservice.ads	20240122042406 f65830f4 gatekeeperservice%s
-D gatekeeperservice.adb	20240122042406 09c20dbd gatekeeperservice%b
+D food_datastructures.ads  20240202184142 a9838647 food_datastructures%s
+D gatekeeperservice.ads	20240202174715 c781372a gatekeeperservice%s
+D gatekeeperservice.adb	20240202194531 0db88e4f gatekeeperservice%b
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-c.ads		20231205000000 5c5a6c17 interfaces.c%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
-D stats_fooddistribution.ads  20240122042406 5bb684b5 stats_fooddistribution%s
+D linearalloclist.ads	20240202194604 2131676e linearalloclist%s
+D linearalloclist.adb	20240202194749 a16abb74 linearalloclist%b
+D stats_fooddistribution.ads  20240201210916 5bb684b5 stats_fooddistribution%s
 D system.ads		20231205000000 426dafb8 system%s
 D s-atacco.ads		20231205000000 903317eb system.address_to_access_conversions%s
 D s-arit64.ads		20231205000000 90488c35 system.arith_64%s
@@ -176,8 +176,8 @@ D s-widthu.ads		20231205000000 b32f15e2 system.width_u%s
 G a e
 G c b b b [b gatekeeperservice 4 1 none]
 G c Z s b [gatekeeperTK gatekeeperservice 7 8 none]
-G c Z s b [acceptmessage gatekeeperservice__gatekeeper 9 13 none]
-G c Z s b [retrievemessage gatekeeperservice__gatekeeper 12 13 none]
+G c Z s b [insert gatekeeperservice__gatekeeper 9 13 none]
+G c Z s b [remove gatekeeperservice__gatekeeper 12 13 none]
 G c Z s s [gatekeeperTKVIP gatekeeperservice 7 3 none]
 G c Z s s [P2sIP gatekeeperservice 9 7 none]
 G c Z s s [P6sIP gatekeeperservice 12 7 none]
@@ -199,86 +199,93 @@ G c Z b b [get gatekeeperservice__integerio__aux_llli 55 14 64_4_6_4]
 G c Z b b [gets gatekeeperservice__integerio__aux_llli 60 14 64_4_6_4]
 G c Z b b [put gatekeeperservice__integerio__aux_llli 65 14 64_4_6_4]
 G c Z b b [puts gatekeeperservice__integerio__aux_llli 71 14 64_4_6_4]
-G r s food_pack [b gatekeeperservice 4 1 none] [food_packIP food_datastructures 38 9 none]
-G r i none [b gatekeeperservice 4 1 none] [circularque standard 7 10 none]
-G r c none [b gatekeeperservice 4 1 none] [printfood_pack food_datastructures 17 14 none]
-G r c none [b gatekeeperservice 4 1 none] [randomfoodtype food_datastructures 31 13 none]
-G r c none [b gatekeeperservice 4 1 none] [printfoodtype food_datastructures 32 14 none]
-G r c none [b gatekeeperservice 4 1 none] [printfood_packtype food_datastructures 19 14 none]
-G r s food_pack [acceptmessage gatekeeperservice__gatekeeper 9 13 none] [food_packIP food_datastructures 38 9 none]
-G r i none [acceptmessage gatekeeperservice__gatekeeper 9 13 none] [circularque standard 7 10 none]
-G r c none [acceptmessage gatekeeperservice__gatekeeper 9 13 none] [printfood_pack food_datastructures 17 14 none]
-G r c none [acceptmessage gatekeeperservice__gatekeeper 9 13 none] [randomfoodtype food_datastructures 31 13 none]
-G r c none [acceptmessage gatekeeperservice__gatekeeper 9 13 none] [printfoodtype food_datastructures 32 14 none]
-G r c none [acceptmessage gatekeeperservice__gatekeeper 9 13 none] [printfood_packtype food_datastructures 19 14 none]
-G r s food_pack [retrievemessage gatekeeperservice__gatekeeper 12 13 none] [food_packIP food_datastructures 38 9 none]
-G r i none [retrievemessage gatekeeperservice__gatekeeper 12 13 none] [circularque standard 7 10 none]
-G r c none [retrievemessage gatekeeperservice__gatekeeper 12 13 none] [printfood_pack food_datastructures 17 14 none]
-G r c none [retrievemessage gatekeeperservice__gatekeeper 12 13 none] [randomfoodtype food_datastructures 31 13 none]
-G r c none [retrievemessage gatekeeperservice__gatekeeper 12 13 none] [printfoodtype food_datastructures 32 14 none]
-G r c none [retrievemessage gatekeeperservice__gatekeeper 12 13 none] [printfood_packtype food_datastructures 19 14 none]
-G r s food_pack [gatekeeperTK gatekeeperservice 7 8 none] [food_packIP food_datastructures 38 9 none]
-G r i none [gatekeeperTK gatekeeperservice 7 8 none] [circularque standard 7 10 none]
-G r c none [gatekeeperTK gatekeeperservice 7 8 none] [printfood_pack food_datastructures 17 14 none]
-G r c none [gatekeeperTK gatekeeperservice 7 8 none] [randomfoodtype food_datastructures 31 13 none]
-G r c none [gatekeeperTK gatekeeperservice 7 8 none] [printfoodtype food_datastructures 32 14 none]
-G r c none [gatekeeperTK gatekeeperservice 7 8 none] [printfood_packtype food_datastructures 19 14 none]
+G r s food_pack [b gatekeeperservice 4 1 none] [food_packIP food_datastructures 36 9 none]
+G r i none [b gatekeeperservice 4 1 none] [linearalloclist standard 6 9 none]
+G r c none [b gatekeeperservice 4 1 none] [getfood_packfoodtype food_datastructures 24 14 none]
+G r c none [b gatekeeperservice 4 1 none] [printfood_pack food_datastructures 18 14 none]
+G r c none [b gatekeeperservice 4 1 none] [randomfoodtype food_datastructures 32 13 none]
+G r c none [b gatekeeperservice 4 1 none] [printfoodtype food_datastructures 33 14 none]
+G r c none [b gatekeeperservice 4 1 none] [printfood_packtype food_datastructures 20 14 none]
+G r s food_pack [insert gatekeeperservice__gatekeeper 9 13 none] [food_packIP food_datastructures 36 9 none]
+G r i none [insert gatekeeperservice__gatekeeper 9 13 none] [linearalloclist standard 6 9 none]
+G r c none [insert gatekeeperservice__gatekeeper 9 13 none] [getfood_packfoodtype food_datastructures 24 14 none]
+G r c none [insert gatekeeperservice__gatekeeper 9 13 none] [printfood_pack food_datastructures 18 14 none]
+G r c none [insert gatekeeperservice__gatekeeper 9 13 none] [randomfoodtype food_datastructures 32 13 none]
+G r c none [insert gatekeeperservice__gatekeeper 9 13 none] [printfoodtype food_datastructures 33 14 none]
+G r c none [insert gatekeeperservice__gatekeeper 9 13 none] [printfood_packtype food_datastructures 20 14 none]
+G r s food_pack [remove gatekeeperservice__gatekeeper 12 13 none] [food_packIP food_datastructures 36 9 none]
+G r i none [remove gatekeeperservice__gatekeeper 12 13 none] [linearalloclist standard 6 9 none]
+G r c none [remove gatekeeperservice__gatekeeper 12 13 none] [getfood_packfoodtype food_datastructures 24 14 none]
+G r c none [remove gatekeeperservice__gatekeeper 12 13 none] [printfood_pack food_datastructures 18 14 none]
+G r c none [remove gatekeeperservice__gatekeeper 12 13 none] [randomfoodtype food_datastructures 32 13 none]
+G r c none [remove gatekeeperservice__gatekeeper 12 13 none] [printfoodtype food_datastructures 33 14 none]
+G r c none [remove gatekeeperservice__gatekeeper 12 13 none] [printfood_packtype food_datastructures 20 14 none]
+G r s food_pack [gatekeeperTK gatekeeperservice 7 8 none] [food_packIP food_datastructures 36 9 none]
+G r i none [gatekeeperTK gatekeeperservice 7 8 none] [linearalloclist standard 6 9 none]
+G r c none [gatekeeperTK gatekeeperservice 7 8 none] [getfood_packfoodtype food_datastructures 24 14 none]
+G r c none [gatekeeperTK gatekeeperservice 7 8 none] [printfood_pack food_datastructures 18 14 none]
+G r c none [gatekeeperTK gatekeeperservice 7 8 none] [randomfoodtype food_datastructures 32 13 none]
+G r c none [gatekeeperTK gatekeeperservice 7 8 none] [printfoodtype food_datastructures 33 14 none]
+G r c none [gatekeeperTK gatekeeperservice 7 8 none] [printfood_packtype food_datastructures 20 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 34|1r6 1r24 2r6 2r25 6r29 18r19 19r19 24r21 28r30 83r7 83r43
+16K9*Ada 20e8 32|1r6 1r24 2r6 2r25 6r29 29r19 30r19 36r21 40r30 95r7 95r43
 X 3 a-calend.ads
-36K13*Calendar 413e17 34|2w10 2r29 18r23 19r23 24r25 28r34 83r47
-42I9*Time<226I9> 34|18r32 19r32
-56V13*Clock{42I9} 34|24s34 28s43 83s56
-103V14*"+"{42I9} 34|25s30
-112V14*"-"{duration} 34|83s62
-120V14*"<"{boolean} 34|28s49
+36K13*Calendar 413e17 32|2w10 2r29 29r23 30r23 36r25 40r34 95r47
+42I9*Time<226I9> 32|29r32 30r32
+56V13*Clock{42I9} 32|36s34 40s43 95s56
+103V14*"+"{42I9} 32|37s30
+112V14*"-"{duration} 32|95s62
+120V14*"<"{boolean} 32|40s49
 226I9 Time_Rep<long_long_integer>
 X 21 a-textio.ads
-58K13*Text_IO 787e16 34|1w10 1r28 6r33 83r11
-282U14*New_Line 34|49s46 52s53 53s46 55s68 71s80 73s72 82s7 83s78
-519U14*Put 34|48s19 52s19 54s19 55s19 69s18 71s18 73s18 82s21
-566U14*Put_Line 34|83s19
+58K13*Text_IO 787e16 32|1w10 1r28 6r33 95r11
+282U14*New_Line 32|61s46 64s53 65s46 67s68 83s80 85s72 94s7 95s78
+519U14*Put 32|60s19 64s19 66s19 67s19 81s18 83s18 85s18 94s21
+566U14*Put_Line 32|95s19
 X 27 a-tiinio.ads
-46k21*Integer_IO 114e27 34|6r41
-83U14 Put 34|54s40[6]
-X 30 circularque.ads
-7k10*CircularQue 21e17 33|3w6 34|10r36
-9U14 acceptMessage 34|47s33[10]
-11U14 retrieveMessage 34|66s32[10]
-13V13 circularQueEmpty{boolean} 34|63s36[10]
-15V13 circularQueFull{boolean} 34|46s24[10]
-X 32 food_datastructures.ads
-5K9*Food_DataStructures 44e25 33|1w6 1r32
-9E9*Food_Type 9e92 34|16r33
-15R9*Food_Pack 41e14 33|9r40 12r43 34|10r49 45r47 60r50
-17U14*PrintFood_Pack 34|49s19 53s19
-19U14*PrintFood_PackType 34|71s49
-31V13*RandomFoodType{9E9} 34|68s46
-32U14*PrintFoodType 34|70s18
-X 33 gatekeeperservice.ads
-5K9*GateKeeperService 16l5 16e22 34|4b14 86l5 86t22
-7t8*GateKeeper 34|8b14 85l8 85t18
-9Y13 acceptMessage 9>28 34|45b20 57l17 57t30
-9r28 newFood{32|15R9} 34|47r48 49r35 53r35
-12Y13 retrieveMessage 12<30 12<54 34|60b20 75l17 75t32
-12r30 newFood{32|15R9} 34|66m49 66r49 71r69
-12b54 availableForShipment{boolean} 34|61m15 61r15 64m18 64r18
-X 34 gatekeeperservice.adb
+46k21*Integer_IO 114e27 32|6r41
+83U14 Put 32|66s40[6]
+X 30 food_datastructures.ads
+5K9*Food_DataStructures 41e25 31|1w6 1r32
+9E9*Food_Type 9e93 32|11r49 27r33
+15R9*Food_Pack 39e14 31|9r33 12r34 32|11r31 18r59 57r39 72r41
+18U14*PrintFood_Pack 32|61s19 65s19
+20U14*PrintFood_PackType 32|83s49
+24V14*getFood_PackFoodType{9E9} 32|13s14
+32V13*RandomFoodType{9E9} 32|80s46
+33U14*PrintFoodType 32|82s18
+X 31 gatekeeperservice.ads
+5K9*GateKeeperService 16l5 16e22 32|4b14 98l5 98t22
+7t8*GateKeeper 32|9b14 97l8 97t18
+9Y13 insert 9>21 32|57b20 69l17 69t23
+9r21 newFood{30|15R9} 32|59r50 61r35 65r35
+12Y13 remove 12<21 12<45 32|72b20 87l17 87t23
+12r21 newFood{30|15R9} 32|78m49 78r49 83r69
+12b45 availableForShipment{boolean} 32|73m15 73r15 76m18 76r18
+X 32 gatekeeperservice.adb
 6K12 IntegerIO[27|46] 6r67
-10K15 CircularQueue[30|7] 11r11 47r19 63r22 66r18
-13i7 rejected{integer} 28r13 51m19 51r31 54r44
-16e7 MgtDesiredFoodTypeToSell{32|9E9} 68m18 70r33
-18i7 Start_Time{3|42I9} 24m7 25r19 83r64
-19i7 End_Time{3|42I9} 25m7 28r51
-45r35 newFood{32|15R9}
-60r37 newFood{32|15R9}
-60b61 availableForShipment{boolean}
-X 35 interfac.ads
+11V13 GetFoodType{30|9E9} 11b13 11>25 14l8 14t19 18r70
+11r25 msg{30|15R9} 13r35
+18K12 LinearAllocListInstance[36|6] 19r8 58r23 59r19 75r22 78r18
+24i7 rejected{integer} 40r13 63m19 63r31 66r44
+27e7 MgtDesiredFoodTypeToSell{30|9E9} 80m18 82r33
+29i7 Start_Time{3|42I9} 36m7 37r19 95r64
+30i7 End_Time{3|42I9} 37m7 40r51
+57r27 newFood{30|15R9}
+72r28 newFood{30|15R9}
+72b52 availableForShipment{boolean}
+X 33 interfac.ads
 56I9*Integer_64<long_long_integer>
+X 36 linearalloclist.ads
+6k9*linearalloclist 32|3w6 18r43 36|14e20
+9U15 insert 32|59s43[18]
+10U15 remove 32|78s42[18]
+12V14 isFull{boolean} 32|58s47[18]
+13V14 isEmpty{boolean} 32|75s46[18]
 X 38 stats_fooddistribution.ads
-6K9*Stats_FoodDistribution 33|2w6 2r35 38|21e28
+6K9*Stats_FoodDistribution 31|2w6 2r35 38|21e28
 X 41 s-arit64.ads
-59I12*Int64{35|56I9}
+59I12*Int64{33|56I9}
 92V13*Multiply_With_Ovflo_Check64{59I12} 96i<c,__gnat_mulv64>22
 X 72 s-stausa.ads
 207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22

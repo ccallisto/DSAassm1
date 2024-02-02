@@ -2,6 +2,7 @@ package body Food_DataStructures is
 
 
 
+   
    package GenerateRandomFoodType is new  Ada.Numerics.Discrete_Random( Food_Type );
    use GenerateRandomFoodType;
 

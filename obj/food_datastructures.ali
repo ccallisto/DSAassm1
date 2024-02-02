@@ -14,13 +14,13 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U food_datastructures%b	food_datastructures.adb	5b8c6ef9 OO PK IL
+U food_datastructures%b	food_datastructures.adb	df0975f8 OO PK
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W system%s		system.ads		system.ali
 Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
 
-U food_datastructures%s	food_datastructures.ads	7a0d7a27 EE NE OO PK IL
+U food_datastructures%s	food_datastructures.ads	ac2b38e7 EE NE OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -51,8 +51,8 @@ D a-tienau.ads		20231205000000 6a9c157b ada.text_io.enumeration_aux%s
 D a-tienio.ads		20231205000000 107ce547 ada.text_io.enumeration_io%s
 D a-tienio.adb		20231205000000 c9e6b5af ada.text_io.enumeration_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D food_datastructures.ads  20240131152750 7fa5c487 food_datastructures%s
-D food_datastructures.adb  20240131152721 2429aa7e food_datastructures%b
+D food_datastructures.ads  20240202184142 a9838647 food_datastructures%s
+D food_datastructures.adb  20240202184114 768af3bf food_datastructures%b
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
 D system.ads		20231205000000 426dafb8 system%s
@@ -92,19 +92,16 @@ G c Z s s [put food_datastructures__food_typeio 42 14 12_4]
 G c Z s s [put food_datastructures__food_typeio 55 14 12_4]
 G c Z s s [get food_datastructures__food_typeio 66 14 12_4]
 G c Z s s [put food_datastructures__food_typeio 74 14 12_4]
-G c Z s b [printfood_pack food_datastructures 17 14 none]
-G c Z s b [printfood_packtype food_datastructures 19 14 none]
-G c Z s b [printfood_packshipment food_datastructures 21 14 none]
-G c Z s b [getfood_packfoodtype food_datastructures 23 14 none]
-G c Z s b [getfood_packfoodshipment food_datastructures 25 14 none]
-G c Z s b [setfood_packfoodtype food_datastructures 27 14 none]
-G c Z s b [setfood_packshipment food_datastructures 29 14 none]
-G c Z s b [randomfoodtype food_datastructures 31 13 none]
-G c Z s b [printfoodtype food_datastructures 32 14 none]
-G c Z s b [lessthan food_datastructures 33 13 none]
-G c Z s b [greaterthan food_datastructures 34 13 none]
-G c Z s b [equalto food_datastructures 35 13 none]
-G c Z s s [food_packIP food_datastructures 38 9 none]
+G c Z s b [printfood_pack food_datastructures 18 14 none]
+G c Z s b [printfood_packtype food_datastructures 20 14 none]
+G c Z s b [printfood_packshipment food_datastructures 22 14 none]
+G c Z s b [getfood_packfoodtype food_datastructures 24 14 none]
+G c Z s b [getfood_packfoodshipment food_datastructures 26 14 none]
+G c Z s b [setfood_packfoodtype food_datastructures 28 14 none]
+G c Z s b [setfood_packshipment food_datastructures 30 14 none]
+G c Z s b [randomfoodtype food_datastructures 32 13 none]
+G c Z s b [printfoodtype food_datastructures 33 14 none]
+G c Z s s [food_packIP food_datastructures 36 9 none]
 G c Z b b [random food_datastructures__generaterandomfoodtype 52 13 6_4]
 G c Z b b [random food_datastructures__generaterandomfoodtype 54 13 6_4]
 G c Z b b [reset food_datastructures__generaterandomfoodtype 60 14 6_4]
@@ -134,10 +131,9 @@ X 17 a-tienio.ads
 26k21*Enumeration_IO 82e31 20|12r43
 55U14*Put 21|12s10[20|12] 15s11[20|12] 40s34[20|12]
 X 20 food_datastructures.ads
-5K9*Food_DataStructures 38E9 44l6 44e25 21|2b15 57l7 57t26
-9E9*Food_Type 9e92 10r30 12r58 23r66 27r72 31r35 32r39 33r37 34r40 35r35
-. 39r21 21|6r73 20r65 26r72 32r35 33r15 39r39 42r37 44r16 44r38 47r40 49r16
-. 49r38 52r36 54r16 54r38
+5K9*Food_DataStructures 36E9 41l6 41e25 21|1b14 42l7 42t26
+9E9*Food_Type 9e93 10r30 12r58 24r66 28r72 32r35 33r39 37r21 21|6r73 20r65
+. 26r72 32r35 33r15 39r39
 9n23*Wheat{9E9} 10r46
 9n30*Corn{9E9}
 9n36*Rice{9E9}
@@ -147,41 +143,32 @@ X 20 food_datastructures.ads
 9n68*Steak{9E9}
 9n75*Pork{9E9}
 9n81*Fish{9E9}
-9n87*Fowl{9E9} 39r34
+9n87*Fowel{9E9} 37r34
 10E12*GrainVegetable{9E9}
 12K12*Food_TypeIO[17|26] 13r8
-15R9*Food_Pack 17r41 19r45 21r48 23r47 25r51 27r51 29r51 38c9 41e14 21|11r41
+15R9*Food_Pack 18r41 20r45 22r48 24r47 26r51 28r51 30r51 36c9 39e14 21|11r41
 . 14r45 17r48 20r46 23r50 26r51 29r51
-17U14*PrintFood_Pack 17>30 21|11b14 12l74 12t88
-17r30 foodIn{15R9} 21|11b30 12r14 12r47
-19U14*PrintFood_PackType 19>34 21|14b14 15l40 15t58
-19r34 FoodIn{15R9} 21|14b34 15r16
-21U14*PrintFood_PackShipment 21>37 21|17b14 18l44 18t66
-21r37 FoodIn{15R9} 21|17b37 18r15
-23V14*getFood_PackFoodType{9E9} 23>36 21|20b13 21l39 21t59
-23r36 FoodIn{15R9} 21|20b35 21r17
-25V14*getFood_PackFoodShipment{character} 25>40 21|23b13 24l43 24t67
-25r40 FoodIn{15R9} 21|23b39 24r17
-27U14*setFood_PackFoodType 27=36 27>62 21|26b14 27l44 27t64
-27r36 FoodIn{15R9} 21|26b36 27m10
-27e62 FoodType{9E9} 21|26b62 27r30
-29U14*setFood_PackShipment 29=36 29>62 21|29b14 30l52 30t72
-29r36 FoodIn{15R9} 21|29b36 30m10
-29e62 FoodShipment{character} 21|29b62 30r34
-31V13*RandomFoodType{9E9} 21|32b13 37l8 37t22
-32U14*PrintFoodType 32>29 21|39b14 40l68 40t81
-32e29 typeFood{9E9} 21|39b29 40r39
-33V13*lessthan{boolean} 33>23 33>29 21|42b13 45l9 45t17
-33e23 Left{9E9} 21|42b23 44r30
-33e29 Right{9E9} 21|42b29 44r52
-34V13*greaterthan{boolean} 34>26 34>32 21|47b13 50l9 50t20
-34e26 Left{9E9} 21|47b26 49r30
-34e32 Right{9E9} 21|47b32 49r52
-35V13*equalto{boolean} 35>22 35>28 21|52b13 55l9 55t16
-35e22 Left{9E9} 21|52b22 54r30
-35e28 Right{9E9} 21|52b28 54r52
-39e10*aFoodType{9E9} 21|12r21 15r23 21r24 27m17
-40e10*aFoodShipment{character} 21|12r54 18r22 24r24 30m17
+18U14*PrintFood_Pack 18>30 21|11b14 12l74 12t88
+18r30 foodIn{15R9} 21|11b30 12r14 12r47
+20U14*PrintFood_PackType 20>34 21|14b14 15l40 15t58
+20r34 FoodIn{15R9} 21|14b34 15r16
+22U14*PrintFood_PackShipment 22>37 21|17b14 18l44 18t66
+22r37 FoodIn{15R9} 21|17b37 18r15
+24V14*getFood_PackFoodType{9E9} 24>36 21|20b13 21l39 21t59
+24r36 FoodIn{15R9} 21|20b35 21r17
+26V14*getFood_PackFoodShipment{character} 26>40 21|23b13 24l43 24t67
+26r40 FoodIn{15R9} 21|23b39 24r17
+28U14*setFood_PackFoodType 28=36 28>62 21|26b14 27l44 27t64
+28r36 FoodIn{15R9} 21|26b36 27m10
+28e62 FoodType{9E9} 21|26b62 27r30
+30U14*setFood_PackShipment 30=36 30>62 21|29b14 30l52 30t72
+30r36 FoodIn{15R9} 21|29b36 30m10
+30e62 FoodShipment{character} 21|29b62 30r34
+32V13*RandomFoodType{9E9} 21|32b13 37l8 37t22
+33U14*PrintFoodType 33>29 21|39b14 40l68 40t81
+33e29 typeFood{9E9} 21|39b29 40r39
+37e10*aFoodType{9E9} 21|12r21 15r23 21r24 27m17
+38e10*aFoodShipment{character} 21|12r54 18r22 24r24 30m17
 X 21 food_datastructures.adb
 6K12 GenerateRandomFoodType[8|44] 7r8 9r7 35r16
 9r4 G{8|50R9[6]} 35r47
