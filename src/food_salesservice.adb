@@ -17,7 +17,7 @@ package body Food_SalesService is
       delay 1.0;  -- Allow for initialization activities.
 
      loop
-        GateKeeper.remove(food, availableForSale );
+        GateKeeper.retrieveMessage(food, availableForSale );
 
         -- The time to sell a product is exponentially distributed with mean 2.0 hours.
         delay( duration( Next_Exponential * 2.0 ) );

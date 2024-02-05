@@ -18,11 +18,11 @@ package body linearalloclist is
       msgFoodType : Food_Type := GetFoodType(msg);
       temp : slotindex;
    begin
-      
+      Put("insert procedure running");
       temp := last;
-         while temp >= first and then msgFoodType < GetFoodType(list(temp)) loop 
+         while temp >= first and then msgFoodType > GetFoodType(list(temp)) loop 
             list(temp+1) := list(temp);
-            temp := temp-1;
+         temp := temp-1;
          end loop;
          if temp = last then
             list(last+1) := msg;
@@ -34,17 +34,24 @@ package body linearalloclist is
          last := last +1;
       end insert;
      
-   procedure remove(msg: out message) is
-      msgFoodType : Food_Type := GetFoodType(msg);
-   begin
-      index := get(msgFoodType);
-         for i in index..last loop
-            list(i +1) := list(i);
-            last := last-1;
-           end loop;
+   procedure remove(msg: in out message) is
+      index : slotindex := 0;
+      found : Boolean := False;
+   begin      
+      index := get(msg);
+      if index /= slotindex'Last then
+         if GetFoodType(list(index)) = GetFoodType(msg) then
+            found := True;
+         for i in index..last - 2 loop
+            list(i) := list(i + 1);
+         end loop;
+            last := last - 1;
+         end if;
+      end if;
+
       end remove;
    
-function get(targetFoodType : Food_Type) return slotindex is
+function get(msg : message) return slotindex is
    low : slotindex := lower_bound;
    high : slotindex := last - 1; 
    mid : slotindex;
@@ -54,9 +61,9 @@ begin
       mid := (low + high) / 2;
 
       currentFoodType := GetFoodType(list(mid));
-      if currentFoodType < targetFoodType then
+      if currentFoodType < GetFoodType(msg) then
          low := mid + 1;
-      elsif currentFoodType > targetFoodType then
+      elsif currentFoodType > GetFoodType(msg) then
          high := mid - 1;
       else
          return mid;

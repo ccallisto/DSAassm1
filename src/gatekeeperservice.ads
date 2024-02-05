@@ -1,15 +1,14 @@
 with Food_DataStructures;  use Food_DataStructures;
 With Stats_FoodDistribution;  use Stats_FoodDistribution;
 
-
 package GateKeeperService is
 
   task GateKeeper is
       -- accept Food_Packs from interplanetary vesssels.
-      entry insert( newFood: in Food_Pack );
+      entry acceptMessage( newFood: in Food_Pack );
 
       --Allow sales to retrive the repackaged Food_Packs.
-      entry remove( newFood: out Food_Pack; availableForShipment: out Boolean );
+      entry retrieveMessage( newFood: out Food_Pack; availableForShipment: out Boolean );
 
    end GateKeeper;
 

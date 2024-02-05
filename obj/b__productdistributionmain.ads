@@ -40,7 +40,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#b39677cc#;
+   u00001 : constant Version_32 := 16#eaab6568#;
    pragma Export (C, u00001, "productdistributionmainB");
    u00002 : constant Version_32 := 16#7320ff5f#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -308,7 +308,7 @@ package ada_main is
    pragma Export (C, u00133, "ada__text_io__generic_auxB");
    u00134 : constant Version_32 := 16#ba6faca0#;
    pragma Export (C, u00134, "ada__text_io__generic_auxS");
-   u00135 : constant Version_32 := 16#c55d10cb#;
+   u00135 : constant Version_32 := 16#4ba1946d#;
    pragma Export (C, u00135, "distribution_serviceB");
    u00136 : constant Version_32 := 16#16cf99e2#;
    pragma Export (C, u00136, "distribution_serviceS");
@@ -418,13 +418,13 @@ package ada_main is
    pragma Export (C, u00188, "ada__text_io__enumeration_auxS");
    u00189 : constant Version_32 := 16#92946bcf#;
    pragma Export (C, u00189, "system__val_enum_8S");
-   u00190 : constant Version_32 := 16#4278effb#;
+   u00190 : constant Version_32 := 16#0979ad03#;
    pragma Export (C, u00190, "gatekeeperserviceB");
-   u00191 : constant Version_32 := 16#35b435d8#;
+   u00191 : constant Version_32 := 16#6c89277c#;
    pragma Export (C, u00191, "gatekeeperserviceS");
-   u00192 : constant Version_32 := 16#ee596d77#;
+   u00192 : constant Version_32 := 16#bc29f506#;
    pragma Export (C, u00192, "linearalloclistB");
-   u00193 : constant Version_32 := 16#d49e807a#;
+   u00193 : constant Version_32 := 16#7bb8d039#;
    pragma Export (C, u00193, "linearalloclistS");
    u00194 : constant Version_32 := 16#2f074c64#;
    pragma Export (C, u00194, "system__img_fixed_64S");
@@ -550,7 +550,7 @@ package ada_main is
    pragma Export (C, u00254, "stats_fooddistributionB");
    u00255 : constant Version_32 := 16#f98e06df#;
    pragma Export (C, u00255, "stats_fooddistributionS");
-   u00256 : constant Version_32 := 16#f9f433aa#;
+   u00256 : constant Version_32 := 16#df5d4924#;
    pragma Export (C, u00256, "food_salesserviceB");
    u00257 : constant Version_32 := 16#1d03e609#;
    pragma Export (C, u00257, "food_salesserviceS");

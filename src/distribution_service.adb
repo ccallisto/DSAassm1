@@ -33,14 +33,14 @@ package body Distribution_Service is
             delay( PrepareMeatFood_PackforSales );
          end if;
 
-         PrintFood_PackShipment( newFood );  put(" delivered. "); new_line(2);
+         PrintFood_PackShipment(newFood);  put(" delivered. "); new_line(2);
 
          -- Blocking request for service.  We are placed at the rear of the queue "Insert" 
          -- associated with the task "GateKeeper" and moved from the run state to the waits 
          -- state by the OS.  We will not be eligible for execution again until "Insert" exits
          -- the rendezvous.  
 
-         GateKeeper.insert( newFood );
+         GateKeeper.acceptMessage( newFood );
 
          -- Schedule arrival of next star ship exponentially distributed over 1.534 seconds (hours).
          -- Time in Ada is of type "duration" defined in package Calendar.

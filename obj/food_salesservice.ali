@@ -22,7 +22,7 @@ RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U food_salesservice%b	food_salesservice.adb	f9f433aa OO PK
+U food_salesservice%b	food_salesservice.adb	df5d4924 OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
@@ -94,8 +94,8 @@ D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
 D food_datastructures.ads  20240202184142 a9838647 food_datastructures%s
 D food_salesservice.ads	20240201210916 ef36e4fb food_salesservice%s
-D food_salesservice.adb	20240202192446 7f5a83da food_salesservice%b
-D gatekeeperservice.ads	20240202174715 c781372a gatekeeperservice%s
+D food_salesservice.adb	20240205195814 00ceebf0 food_salesservice%b
+D gatekeeperservice.ads	20240205201542 9ebc258e gatekeeperservice%s
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-c.ads		20231205000000 5c5a6c17 interfaces.c%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
@@ -181,7 +181,7 @@ G c Z b b [get food_salesservice__integer_io__aux_llli 55 14 64_4_9_4]
 G c Z b b [gets food_salesservice__integer_io__aux_llli 60 14 64_4_9_4]
 G c Z b b [put food_salesservice__integer_io__aux_llli 65 14 64_4_9_4]
 G c Z b b [puts food_salesservice__integer_io__aux_llli 71 14 64_4_9_4]
-G r r none [retailsales food_salesservice 5 14 none] [remove gatekeeperservice__gatekeeper 12 13 none]
+G r r none [retailsales food_salesservice 5 14 none] [retrievemessage gatekeeperservice__gatekeeper 11 13 none]
 G r c none [retailsales food_salesservice 5 14 none] [next_exponential stats_fooddistribution 14 13 none]
 G r c none [retailsales food_salesservice 5 14 none] [printfood_pack food_datastructures 18 14 none]
 X 1 ada.ads
@@ -203,12 +203,12 @@ X 31 food_salesservice.ads
 X 32 food_salesservice.adb
 9K12 Integer_IO[27|46] 10r8 27r45
 11i4 salecount{integer} 26m9 26r22 27r60
-13r7 food{30|15R9} 20m27 25r64
-14b7 availableForSale{boolean} 20m33
+13r7 food{30|15R9} 20m36 25r64
+14b7 availableForSale{boolean} 20m42
 X 33 gatekeeperservice.ads
-5K9*GateKeeperService 32|3w6 3r29 33|16e22
-7t8*GateKeeper 32|20r9
-12Y13 remove 32|20s20
+4K9*GateKeeperService 32|3w6 3r29 33|15e22
+6t8*GateKeeper 32|20r9
+11Y13 retrieveMessage 32|20s20
 X 37 stats_fooddistribution.ads
 6K9*Stats_FoodDistribution 31|2w6 2r35 32|2w6 2r35 37|21e28
 14V13*Next_Exponential{float} 32|23s26

@@ -14,7 +14,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U linearalloclist%b	linearalloclist.adb	ee596d77 NE OO PK GE IL
+U linearalloclist%b	linearalloclist.adb	bc29f506 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -37,7 +37,7 @@ Z system.val_int%s	s-valint.ads		s-valint.ali
 Z system.val_lli%s	s-vallli.ads		s-vallli.ali
 Z system.val_llli%s	s-valllli.ads		s-valllli.ali
 
-U linearalloclist%s	linearalloclist.ads	d49e807a BN EE NE OO PK GE IL
+U linearalloclist%s	linearalloclist.ads	7bb8d039 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -70,12 +70,12 @@ D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
 D food_datastructures.ads  20240202184142 a9838647 food_datastructures%s
-D gatekeeperservice.ads	20240202174715 c781372a gatekeeperservice%s
+D gatekeeperservice.ads	20240205201542 9ebc258e gatekeeperservice%s
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-c.ads		20231205000000 5c5a6c17 interfaces.c%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
-D linearalloclist.ads	20240202194604 2131676e linearalloclist%s
-D linearalloclist.adb	20240202194749 a16abb74 linearalloclist%b
+D linearalloclist.ads	20240205193655 8e17372d linearalloclist%s
+D linearalloclist.adb	20240205201309 050161e2 linearalloclist%b
 D stats_fooddistribution.ads  20240201210916 5bb684b5 stats_fooddistribution%s
 D system.ads		20231205000000 426dafb8 system%s
 D s-atacco.ads		20231205000000 903317eb system.address_to_access_conversions%s
@@ -139,48 +139,50 @@ X 1 ada.ads
 16K9*Ada 20e8 32|1r6 1r23 33|9r25
 X 18 a-textio.ads
 58K13*Text_IO 787e16 32|1w10 1r27 33|9r29
+519U14*Put 33|21s7
 X 24 a-tiinio.ads
 46k21*Integer_IO 114e27 33|9r37
 X 27 food_datastructures.ads
 5K9*Food_DataStructures 41e25 32|2w6 2r31 33|1w6 2r5
-9E9*Food_Type 9e93 32|5r54 11r35 33|18r21 38r21 47r31 51r22
+9E9*Food_Type 9e93 32|5r54 33|18r21 58r22
 X 28 gatekeeperservice.ads
-5K9*GateKeeperService 16e22 33|3w6 4r5
+4K9*GateKeeperService 15e22 33|3w6 4r5
 X 32 linearalloclist.ads
-4+9 message 5r38 9r30 10r31 33|12r30 17r29 37r30
-5V18 GetFoodType{27|9E9} 5>30 33|18s34 23s53 38s34 56s26
+4+9 message 5r38 9r30 10r34 11r24 33|12r30 17r29 37r33 54r20
+5V18 GetFoodType{27|9E9} 5>30 33|18s34 23s53 43s13 43s40 63s26 64s28 66s31
 5*30 msg{4+9}
-6k9*linearalloclist 4z9 5z18 14l5 14e20 33|6b14 87l5 87t20
+6k9*linearalloclist 4z9 5z18 14l5 14e20 33|6b14 94l5 94t20
 7i5*capacity{natural} 8r45 33|13r21
-8I13*slotindex{natural} 11r53 33|11r30 12r16 14r17 15r17 19r14 47r49 48r10
-. 49r11 50r10 66r11
+8I13*slotindex{natural} 11r40 33|11r30 12r16 14r17 15r17 19r14 38r15 42r19
+. 54r36 55r10 56r11 57r10 73r11
 9U15*insert 9>22 33|17b14 35l11 35t17
 9*22 msg{4+9} 33|17b21 18r46 28r29 30r28 32r29
-10U15*remove 10<22 33|37b14 45l11 45t17
-10*22 msg{4+9} 33|37b21 38r46
-11V14*get{8I13} 11>18 33|40s16 47b10 67l5 67t8
-11e18 targetFoodType{27|9E9} 33|47b14 57r28 59r31
-12V14*isFull{boolean} 33|69b13 76l11 76t17
-13V14*isEmpty{boolean} 33|78b13 85l11 85t18
+10U15*remove 10=22 33|37b14 52l11 52t17
+10*22 msg{4+9} 33|37b21 41r20 43r52
+11V14*get{8I13} 11>18 33|41s16 54b10 74l5 74t8
+11*18 msg{4+9} 33|54b14 64r40 66r43
+12V14*isFull{boolean} 33|76b13 83l11 83t17
+13V14*isEmpty{boolean} 33|85b13 92l11 92t18
 X 33 linearalloclist.adb
 9K12 IntIO[24|46] 10r8
-11i4 first{32|8I13} 14r30 23r24 29r23 30r18 80r17
-11i11 last{32|8I13} 15r30 22r15 27r20 28r18 34m10 34r18 41r26 43m13 43r21
-. 49r24 71r10 80r10
+11i4 first{32|8I13} 14r30 23r24 29r23 30r18 87r17
+11i11 last{32|8I13} 15r30 22r15 27r20 28r18 34m10 34r18 45r26 48m13 48r21
+. 56r24 78r10 87r10
 11i17 temp{32|8I13}
-11i23 index{32|8I13} 40m7 41r19
-12a4 list(32|4+9) 23r65 24m13 24r29 28m13 30m13 32m13 42m13 42r27 56r38
-13i4 max{natural} 71r17
-14i4 lower_bound{32|8I13} 48r23
+11i23 index{32|8I13}
+12a4 list(32|4+9) 23r65 24m13 24r29 28m13 30m13 32m13 43r25 46m13 46r24 63r38
+13i4 max{natural} 78r17
+14i4 lower_bound{32|8I13} 55r23
 15i4 upper_bound{32|8I13}
 18e7 msgFoodType{27|9E9} 23r39
-19i7 temp{32|8I13} 22m7 23r16 23r70 24r18 24r34 25m13 25r21 27r13 29r16 32r18
-38e7 msgFoodType{27|9E9} 40r20
-41i14 i{integer} 42r18 42r32
-48i4 low{32|8I13} 53r10 54r15 58m10
-49i4 high{32|8I13} 53r17 54r21 60m10
-50i4 mid{32|8I13} 54m7 56r43 58r17 60r18 62r17
-51e4 currentFoodType{27|9E9} 56m7 57r10 59r13
+19i7 temp{32|8I13} 22m7 23r16 23r70 24r18 24r34 25m10 25r18 27r13 29r16 32r18
+38i7 index{32|8I13} 41m7 42r10 43r30 45r19
+39b7 found{boolean} 44m13
+45i14 i{integer} 46r18 46r29
+55i4 low{32|8I13} 60r10 61r15 65m10
+56i4 high{32|8I13} 60r17 61r21 67m10
+57i4 mid{32|8I13} 61m7 63r43 65r17 67r18 69r17
+58e4 currentFoodType{27|9E9} 63m7 64r10 66r13
 X 64 s-stausa.ads
 207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22
 272U14*Output_Results 276i<c,__gnat_stack_usage_output_results>22
