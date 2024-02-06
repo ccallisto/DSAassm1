@@ -37,6 +37,6 @@ package body Food_DataStructures is
    end RandomFoodType;
 
    procedure PrintFoodType( typeFood: Food_Type ) is
-   begin put("Type food is: ");  put( typeFood ); new_line(1); end PrintFoodType;
+   begin put( typeFood ); end PrintFoodType;
 
   end Food_DataStructures;

@@ -54,13 +54,13 @@ package body GateKeeperService is
 
               if not(FoodList.isEmpty) then
                  availableForShipment := True;
-
-                 FoodList.remove(newFood);
-
                  MgtDesiredFoodTypeToSell := RandomFoodType;
+                 FoodList.remove(newFood, MgtDesiredFoodTypeToSell);
+
+                 
                  put("Mgt Desired Food Type To Sell is: ");
                  PrintFoodType( MgtDesiredFoodTypeToSell );
-                 put("Actual type sold is: ");  PrintFood_PackType( newFood ); new_line;
+                 put(" Actual type sold is: ");  PrintFood_PackType( newFood ); new_line;
                  PrintFood_PackShipment( newFood );
                  put("Food pack removed by GateKeeper for shipment."); new_line(2);
               end if;

@@ -11,7 +11,7 @@ package body linearalloclist is
    first, last, temp, index: slotindex := 0;
    list: array(slotindex) of message;
    max : natural := capacity -1;
-   lower_bound :slotindex := first;
+   lower_bound : slotindex := first;
    upper_bound :slotindex := last;
 
    procedure insert(msg: in message) is
@@ -26,43 +26,64 @@ package body linearalloclist is
          end loop;
          if temp = last then
          list(last+1) := msg;
-         Put_Line("     inserted in last position");
+         --  Put_Line("     inserted in last position");
          elsif temp < first then
          list(first) := msg;
-         Put_Line("     inserted in first position");
+         --  Put_Line("     inserted in first position");
          else 
          list(temp+1) := msg;
-         Put_Line("     inserted in middle position");
+         --  Put_Line("     inserted in middle position");
          end if;
          last := last +1;
       end insert;
      
-   procedure remove(msg: in out message) is
-      low: slotindex := lower_bound;
-      high: slotindex := last-1;
-      mid : slotindex;
-      found : Boolean := False;
-      inmessg : message := msg;
-   begin
-      while low <= high loop
-         mid := ((low+high)/2);
-      if GetFoodType(list(mid)) < GetFoodType(inmessg) then    
-            low := mid+1;
-      elsif GetFoodType(list(mid)) > GetFoodType(inmessg) then
-           high := mid-1;
-      else
-           found := true;
-         end if;
-      end loop;
+   procedure remove(msg: in out message; desiredFood: Food_Type) is
+   low: slotindex := lower_bound;
+   high: slotindex := last;
+   mid : slotindex;
+   found : Boolean := False;
+   inmessg : message := msg;
+begin
+   Put_Line("Starting removal process...");
+   --  Put("List state before removal: ");
+   -- Assuming you have a way to print the list or relevant details.
+   -- This would depend on your implementation.
+   
+   --  Put_Line("Running binary search to find the item...");
+   while low <= high loop
+      mid := (low + high) / 2;
+      --  Put("Checking position "); Put(Integer(mid)); Put_Line("...");
       
-      if found then 
-         msg := list(mid);
-         for i in mid..last -2 loop
-            list(i) := list(i+1);
-         end loop;
-         last := last-1;
+      if GetFoodType(list(mid)) < desiredFood then    
+         low := mid + 1;
+      elsif GetFoodType(list(mid)) > desiredFood then
+         high := mid - 1;
+      else
+         found := True;
+            Put_Line("Item found during binary search.");
+            msg := list(mid);
+         exit; -- Found the item, exit the loop
       end if;
-   end remove;   
+   end loop;
+   
+   if found then
+      -- Item found, proceed to remove it by shifting elements
+      Put_Line("Item found, removing...");
+      for i in mid..last - 1 loop
+         list(i) := list(i + 1);
+      end loop;
+      last := last - 1; -- Update the last index since an item is removed
+      Put_Line("Item removed successfully.");
+   else
+      -- Item not found, handle according to your specific requirements
+         Put("sorry, no food packets of  ");PrintFoodType(Food_Type( desiredfood )); Put_Line(" are currently available");
+         msg := list(last);
+   end if;
+   
+   --  Put("List state after removal: ");
+   -- Assuming again you have a way to print the list or relevant details.
+end remove;
+
       
    
    function isFull return Boolean is

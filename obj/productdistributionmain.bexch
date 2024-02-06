@@ -1,28 +1,27 @@
 [GENERATED OBJECT FILE]
 b__productdistributionmain.o
 [PROJECT FILES]
-C:\Users\Callisto\assm1\DSAassm1\fooddistributionservice.gpr
-20240206022210 afbe15b5292c2b1754e1d67423e94aca
+/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/fooddistributionservice.gpr
+20240206153217 cbaec171bd97430938d96705a21ee098
 [BOUND OBJECT FILES]
-C:\Users\Callisto\assm1\DSAassm1\obj\food_datastructures.o
-C:\Users\Callisto\assm1\DSAassm1\obj\stats_fooddistribution.o
-C:\Users\Callisto\assm1\DSAassm1\obj\linearalloclist.o
-C:\Users\Callisto\assm1\DSAassm1\obj\gatekeeperservice.o
-C:\Users\Callisto\assm1\DSAassm1\obj\distribution_service.o
-C:\Users\Callisto\assm1\DSAassm1\obj\food_salesservice.o
-C:\Users\Callisto\assm1\DSAassm1\obj\productdistributionmain.o
+/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/food_datastructures.o
+/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/stats_fooddistribution.o
+/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/linearalloclist.o
+/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/gatekeeperservice.o
+/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/distribution_service.o
+/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/food_salesservice.o
+/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/productdistributionmain.o
 [GENERATED SOURCE FILES]
 b__productdistributionmain.ads
 b__productdistributionmain.adb
 b__productdistributionmain.ali
 [RESULTING OPTIONS]
--LC:\Users\Callisto\assm1\DSAassm1\obj\
--LC:\Users\Callisto\assm1\DSAassm1\obj\
--LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-L/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/
+-L/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/
+-L/usr/lib/gcc/x86_64-redhat-linux/13/adalib/
 -static
--static-libgcc
-C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnarl.a
-C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
--Xlinker
---stack=0x200000,0x1000
--mthreads
+-lgnarl
+-lgnat
+-lrt
+-lpthread
+-ldl

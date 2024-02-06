@@ -7,7 +7,7 @@ package linearalloclist is
     capacity: Natural := 21;
     subtype slotindex is Natural range 0 .. capacity - 1;
     procedure insert(msg: in message);
-    procedure remove(msg: in out message);
+    procedure remove(msg: in out message; desiredFood: Food_Type);
     function isFull return Boolean;
     function isEmpty return Boolean;
 end linearalloclist;
