@@ -42,13 +42,13 @@ package body linearalloclist is
       high: slotindex := last-1;
       mid : slotindex;
       found : Boolean := False;
-      
+      inmessg : message := msg;
    begin
       while low <= high loop
          mid := ((low+high)/2);
-      if GetFoodType(list(mid)) < GetFoodType(msg) then    
+      if GetFoodType(list(mid)) < GetFoodType(inmessg) then    
             low := mid+1;
-      elsif GetFoodType(list(mid)) > GetFoodType(msg) then
+      elsif GetFoodType(list(mid)) > GetFoodType(inmessg) then
            high := mid-1;
       else
            found := true;
