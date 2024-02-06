@@ -35,9 +35,9 @@ package body GateKeeperService is
 
          select
             accept acceptMessage(newFood: in Food_Pack) do
-               if not(FoodList.isFull) then --i think there is a bug here causing the program to not transfer data correctly
+               if not(FoodList.isFull) then --i think there is a bug here causing the program to not transfer data correctly; fowel seems to get defaulted to and then nothing gets properly removed or sold
                   FoodList.insert(newFood);
-                  put("GateKeeper insert accepted");
+                  put("GateKeeper insert accepted     ");
                   PrintFood_Pack(newFood); new_line;
                else
                   rejected := rejected + 1;
@@ -61,7 +61,7 @@ package body GateKeeperService is
                  put("Mgt Desired Food Type To Sell is: ");
                  PrintFoodType( MgtDesiredFoodTypeToSell );
                  put("Actual type sold is: ");  PrintFood_PackType( newFood ); new_line;
-                 --PrintFood_PackShipment( newFood );
+                 PrintFood_PackShipment( newFood );
                  put("Food pack removed by GateKeeper for shipment."); new_line(2);
               end if;
             end retrieveMessage;

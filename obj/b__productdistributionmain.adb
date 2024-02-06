@@ -9,53 +9,48 @@ with Ada.Exceptions;
 
 package body ada_main is
 
-   E079 : Short_Integer; pragma Import (Ada, E079, "system__os_lib_E");
+   E067 : Short_Integer; pragma Import (Ada, E067, "system__os_lib_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__exceptions_E");
    E011 : Short_Integer; pragma Import (Ada, E011, "system__soft_links_E");
    E023 : Short_Integer; pragma Import (Ada, E023, "system__exception_table_E");
-   E046 : Short_Integer; pragma Import (Ada, E046, "ada__containers_E");
-   E074 : Short_Integer; pragma Import (Ada, E074, "ada__io_exceptions_E");
-   E030 : Short_Integer; pragma Import (Ada, E030, "ada__numerics_E");
-   E061 : Short_Integer; pragma Import (Ada, E061, "ada__strings_E");
-   E063 : Short_Integer; pragma Import (Ada, E063, "ada__strings__maps_E");
-   E066 : Short_Integer; pragma Import (Ada, E066, "ada__strings__maps__constants_E");
-   E051 : Short_Integer; pragma Import (Ada, E051, "interfaces__c_E");
+   E036 : Short_Integer; pragma Import (Ada, E036, "ada__containers_E");
+   E063 : Short_Integer; pragma Import (Ada, E063, "ada__io_exceptions_E");
+   E048 : Short_Integer; pragma Import (Ada, E048, "ada__strings_E");
+   E050 : Short_Integer; pragma Import (Ada, E050, "ada__strings__maps_E");
+   E054 : Short_Integer; pragma Import (Ada, E054, "ada__strings__maps__constants_E");
+   E073 : Short_Integer; pragma Import (Ada, E073, "interfaces__c_E");
    E024 : Short_Integer; pragma Import (Ada, E024, "system__exceptions_E");
-   E088 : Short_Integer; pragma Import (Ada, E088, "system__object_reader_E");
-   E056 : Short_Integer; pragma Import (Ada, E056, "system__dwarf_lines_E");
+   E075 : Short_Integer; pragma Import (Ada, E075, "system__object_reader_E");
+   E043 : Short_Integer; pragma Import (Ada, E043, "system__dwarf_lines_E");
    E019 : Short_Integer; pragma Import (Ada, E019, "system__soft_links__initialize_E");
-   E045 : Short_Integer; pragma Import (Ada, E045, "system__traceback__symbolic_E");
-   E029 : Short_Integer; pragma Import (Ada, E029, "system__img_int_E");
-   E069 : Short_Integer; pragma Import (Ada, E069, "system__img_uns_E");
-   E104 : Short_Integer; pragma Import (Ada, E104, "ada__strings__utf_encoding_E");
-   E112 : Short_Integer; pragma Import (Ada, E112, "ada__tags_E");
-   E102 : Short_Integer; pragma Import (Ada, E102, "ada__strings__text_buffers_E");
-   E120 : Short_Integer; pragma Import (Ada, E120, "ada__streams_E");
-   E132 : Short_Integer; pragma Import (Ada, E132, "system__file_control_block_E");
-   E131 : Short_Integer; pragma Import (Ada, E131, "system__finalization_root_E");
-   E129 : Short_Integer; pragma Import (Ada, E129, "ada__finalization_E");
-   E128 : Short_Integer; pragma Import (Ada, E128, "system__file_io_E");
-   E215 : Short_Integer; pragma Import (Ada, E215, "system__task_info_E");
-   E140 : Short_Integer; pragma Import (Ada, E140, "ada__calendar_E");
-   E138 : Short_Integer; pragma Import (Ada, E138, "ada__calendar__delays_E");
-   E118 : Short_Integer; pragma Import (Ada, E118, "ada__text_io_E");
-   E184 : Short_Integer; pragma Import (Ada, E184, "system__random_seed_E");
-   E172 : Short_Integer; pragma Import (Ada, E172, "system__img_llli_E");
-   E170 : Short_Integer; pragma Import (Ada, E170, "system__img_lli_E");
-   E209 : Short_Integer; pragma Import (Ada, E209, "system__task_primitives__operations_E");
-   E253 : Short_Integer; pragma Import (Ada, E253, "ada__real_time_E");
-   E154 : Short_Integer; pragma Import (Ada, E154, "system__img_llu_E");
-   E231 : Short_Integer; pragma Import (Ada, E231, "system__tasking__initialization_E");
-   E239 : Short_Integer; pragma Import (Ada, E239, "system__tasking__protected_objects_E");
-   E241 : Short_Integer; pragma Import (Ada, E241, "system__tasking__protected_objects__entries_E");
-   E245 : Short_Integer; pragma Import (Ada, E245, "system__tasking__queuing_E");
-   E249 : Short_Integer; pragma Import (Ada, E249, "system__tasking__stages_E");
-   E186 : Short_Integer; pragma Import (Ada, E186, "food_datastructures_E");
-   E255 : Short_Integer; pragma Import (Ada, E255, "stats_fooddistribution_E");
-   E191 : Short_Integer; pragma Import (Ada, E191, "gatekeeperservice_E");
-   E193 : Short_Integer; pragma Import (Ada, E193, "linearalloclist_E");
-   E136 : Short_Integer; pragma Import (Ada, E136, "distribution_service_E");
-   E257 : Short_Integer; pragma Import (Ada, E257, "food_salesservice_E");
+   E035 : Short_Integer; pragma Import (Ada, E035, "system__traceback__symbolic_E");
+   E172 : Short_Integer; pragma Import (Ada, E172, "ada__numerics_E");
+   E094 : Short_Integer; pragma Import (Ada, E094, "ada__strings__utf_encoding_E");
+   E100 : Short_Integer; pragma Import (Ada, E100, "ada__tags_E");
+   E092 : Short_Integer; pragma Import (Ada, E092, "ada__strings__text_buffers_E");
+   E195 : Short_Integer; pragma Import (Ada, E195, "interfaces__c__strings_E");
+   E108 : Short_Integer; pragma Import (Ada, E108, "ada__streams_E");
+   E120 : Short_Integer; pragma Import (Ada, E120, "system__file_control_block_E");
+   E119 : Short_Integer; pragma Import (Ada, E119, "system__finalization_root_E");
+   E117 : Short_Integer; pragma Import (Ada, E117, "ada__finalization_E");
+   E116 : Short_Integer; pragma Import (Ada, E116, "system__file_io_E");
+   E203 : Short_Integer; pragma Import (Ada, E203, "system__task_info_E");
+   E128 : Short_Integer; pragma Import (Ada, E128, "ada__calendar_E");
+   E126 : Short_Integer; pragma Import (Ada, E126, "ada__calendar__delays_E");
+   E239 : Short_Integer; pragma Import (Ada, E239, "ada__real_time_E");
+   E106 : Short_Integer; pragma Import (Ada, E106, "ada__text_io_E");
+   E178 : Short_Integer; pragma Import (Ada, E178, "system__random_seed_E");
+   E219 : Short_Integer; pragma Import (Ada, E219, "system__tasking__initialization_E");
+   E227 : Short_Integer; pragma Import (Ada, E227, "system__tasking__protected_objects_E");
+   E229 : Short_Integer; pragma Import (Ada, E229, "system__tasking__protected_objects__entries_E");
+   E233 : Short_Integer; pragma Import (Ada, E233, "system__tasking__queuing_E");
+   E237 : Short_Integer; pragma Import (Ada, E237, "system__tasking__stages_E");
+   E180 : Short_Integer; pragma Import (Ada, E180, "food_datastructures_E");
+   E241 : Short_Integer; pragma Import (Ada, E241, "stats_fooddistribution_E");
+   E185 : Short_Integer; pragma Import (Ada, E185, "gatekeeperservice_E");
+   E187 : Short_Integer; pragma Import (Ada, E187, "linearalloclist_E");
+   E124 : Short_Integer; pragma Import (Ada, E124, "distribution_service_E");
+   E243 : Short_Integer; pragma Import (Ada, E243, "food_salesservice_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -66,14 +61,14 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E241 := E241 - 1;
+      E229 := E229 - 1;
       declare
          procedure F1;
          pragma Import (Ada, F1, "system__tasking__protected_objects__entries__finalize_spec");
       begin
          F1;
       end;
-      E118 := E118 - 1;
+      E106 := E106 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "ada__text_io__finalize_spec");
@@ -84,7 +79,7 @@ package body ada_main is
          procedure F3;
          pragma Import (Ada, F3, "system__file_io__finalize_body");
       begin
-         E128 := E128 - 1;
+         E116 := E116 - 1;
          F3;
       end;
       declare
@@ -181,24 +176,24 @@ package body ada_main is
            False, False, False, False, False, False, False, False, 
            False, False, False, False, False, False, False, False, 
            False, False, False, False, False, False, False, False, 
-           False, False, False, True, False, False, False, False, 
+           True, False, False, False, False, False, False, False, 
            False, False, False, False, False, False, False, False, 
-           False, False, False, False),
+           False),
          Value => (0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
          Violated =>
           (False, False, False, False, True, True, False, False, 
            True, False, False, True, True, True, True, False, 
            False, False, False, True, False, False, True, True, 
            False, True, True, False, True, True, True, True, 
-           False, False, False, False, False, False, True, False, 
-           False, True, False, False, False, False, True, False, 
-           True, False, True, True, False, False, True, False, 
            False, False, False, False, False, True, False, False, 
-           False, True, False, True, True, True, False, False, 
-           True, False, True, True, True, False, True, True, 
-           False, True, True, True, True, False, False, False, 
-           False, False, False, False, False, False, True, True, 
-           True, False, False, False),
+           True, False, False, False, False, True, False, True, 
+           False, True, True, False, False, True, False, False, 
+           False, False, False, True, False, False, True, False, 
+           True, True, True, False, False, True, False, True, 
+           True, True, False, True, True, False, True, True, 
+           True, True, False, False, False, False, False, False, 
+           False, False, False, True, True, True, False, False, 
+           False),
          Count => (0, 0, 0, 0, 2, 2, 2, 0, 0, 0),
          Unknown => (False, False, False, False, False, False, True, False, False, False));
       Priority_Specific_Dispatching :=
@@ -225,99 +220,91 @@ package body ada_main is
       System.Exception_Table'Elab_Body;
       E023 := E023 + 1;
       Ada.Containers'Elab_Spec;
-      E046 := E046 + 1;
+      E036 := E036 + 1;
       Ada.Io_Exceptions'Elab_Spec;
-      E074 := E074 + 1;
-      Ada.Numerics'Elab_Spec;
-      E030 := E030 + 1;
-      Ada.Strings'Elab_Spec;
-      E061 := E061 + 1;
-      Ada.Strings.Maps'Elab_Spec;
       E063 := E063 + 1;
+      Ada.Strings'Elab_Spec;
+      E048 := E048 + 1;
+      Ada.Strings.Maps'Elab_Spec;
+      E050 := E050 + 1;
       Ada.Strings.Maps.Constants'Elab_Spec;
-      E066 := E066 + 1;
+      E054 := E054 + 1;
       Interfaces.C'Elab_Spec;
-      E051 := E051 + 1;
+      E073 := E073 + 1;
       System.Exceptions'Elab_Spec;
       E024 := E024 + 1;
       System.Object_Reader'Elab_Spec;
-      E088 := E088 + 1;
+      E075 := E075 + 1;
       System.Dwarf_Lines'Elab_Spec;
+      E043 := E043 + 1;
       System.Os_Lib'Elab_Body;
-      E079 := E079 + 1;
+      E067 := E067 + 1;
       System.Soft_Links.Initialize'Elab_Body;
       E019 := E019 + 1;
       E011 := E011 + 1;
       System.Traceback.Symbolic'Elab_Body;
-      E045 := E045 + 1;
-      System.Img_Int'Elab_Spec;
-      E029 := E029 + 1;
+      E035 := E035 + 1;
       E006 := E006 + 1;
-      System.Img_Uns'Elab_Spec;
-      E069 := E069 + 1;
-      E056 := E056 + 1;
+      Ada.Numerics'Elab_Spec;
+      E172 := E172 + 1;
       Ada.Strings.Utf_Encoding'Elab_Spec;
-      E104 := E104 + 1;
+      E094 := E094 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
-      E112 := E112 + 1;
+      E100 := E100 + 1;
       Ada.Strings.Text_Buffers'Elab_Spec;
-      E102 := E102 + 1;
+      Ada.Strings.Text_Buffers'Elab_Body;
+      E092 := E092 + 1;
+      Interfaces.C.Strings'Elab_Spec;
+      E195 := E195 + 1;
       Ada.Streams'Elab_Spec;
-      E120 := E120 + 1;
+      E108 := E108 + 1;
       System.File_Control_Block'Elab_Spec;
-      E132 := E132 + 1;
+      E120 := E120 + 1;
       System.Finalization_Root'Elab_Spec;
-      E131 := E131 + 1;
+      System.Finalization_Root'Elab_Body;
+      E119 := E119 + 1;
       Ada.Finalization'Elab_Spec;
-      E129 := E129 + 1;
+      E117 := E117 + 1;
       System.File_Io'Elab_Body;
-      E128 := E128 + 1;
+      E116 := E116 + 1;
       System.Task_Info'Elab_Spec;
-      E215 := E215 + 1;
+      E203 := E203 + 1;
       Ada.Calendar'Elab_Spec;
       Ada.Calendar'Elab_Body;
-      E140 := E140 + 1;
+      E128 := E128 + 1;
       Ada.Calendar.Delays'Elab_Body;
-      E138 := E138 + 1;
-      Ada.Text_Io'Elab_Spec;
-      Ada.Text_Io'Elab_Body;
-      E118 := E118 + 1;
-      System.Random_Seed'Elab_Body;
-      E184 := E184 + 1;
-      System.Img_Llli'Elab_Spec;
-      E172 := E172 + 1;
-      System.Img_Lli'Elab_Spec;
-      E170 := E170 + 1;
-      System.Task_Primitives.Operations'Elab_Body;
-      E209 := E209 + 1;
+      E126 := E126 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
-      E253 := E253 + 1;
-      System.Img_Llu'Elab_Spec;
-      E154 := E154 + 1;
-      System.Tasking.Initialization'Elab_Body;
-      E231 := E231 + 1;
-      System.Tasking.Protected_Objects'Elab_Body;
       E239 := E239 + 1;
+      Ada.Text_Io'Elab_Spec;
+      Ada.Text_Io'Elab_Body;
+      E106 := E106 + 1;
+      System.Random_Seed'Elab_Body;
+      E178 := E178 + 1;
+      System.Tasking.Initialization'Elab_Body;
+      E219 := E219 + 1;
+      System.Tasking.Protected_Objects'Elab_Body;
+      E227 := E227 + 1;
       System.Tasking.Protected_Objects.Entries'Elab_Spec;
-      E241 := E241 + 1;
+      E229 := E229 + 1;
       System.Tasking.Queuing'Elab_Body;
-      E245 := E245 + 1;
+      E233 := E233 + 1;
       System.Tasking.Stages'Elab_Body;
-      E249 := E249 + 1;
+      E237 := E237 + 1;
       Food_Datastructures'Elab_Body;
-      E186 := E186 + 1;
+      E180 := E180 + 1;
       Stats_Fooddistribution'Elab_Spec;
-      E255 := E255 + 1;
+      E241 := E241 + 1;
       Gatekeeperservice'Elab_Spec;
-      E193 := E193 + 1;
+      E187 := E187 + 1;
       Gatekeeperservice'Elab_Body;
-      E191 := E191 + 1;
+      E185 := E185 + 1;
       Distribution_Service'Elab_Body;
-      E136 := E136 + 1;
+      E124 := E124 + 1;
       Food_Salesservice'Elab_Body;
-      E257 := E257 + 1;
+      E243 := E243 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -355,22 +342,23 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/food_datastructures.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/stats_fooddistribution.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/linearalloclist.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/gatekeeperservice.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/distribution_service.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/food_salesservice.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/productdistributionmain.o
-   --   -L/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/
-   --   -L/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/obj/
-   --   -L/usr/lib/gcc/x86_64-redhat-linux/13/adalib/
+   --   C:\Users\Callisto\assm1\DSAassm1\obj\food_datastructures.o
+   --   C:\Users\Callisto\assm1\DSAassm1\obj\stats_fooddistribution.o
+   --   C:\Users\Callisto\assm1\DSAassm1\obj\linearalloclist.o
+   --   C:\Users\Callisto\assm1\DSAassm1\obj\gatekeeperservice.o
+   --   C:\Users\Callisto\assm1\DSAassm1\obj\distribution_service.o
+   --   C:\Users\Callisto\assm1\DSAassm1\obj\food_salesservice.o
+   --   C:\Users\Callisto\assm1\DSAassm1\obj\productdistributionmain.o
+   --   -LC:\Users\Callisto\assm1\DSAassm1\obj\
+   --   -LC:\Users\Callisto\assm1\DSAassm1\obj\
+   --   -LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
    --   -static
    --   -lgnarl
    --   -lgnat
-   --   -lrt
-   --   -lpthread
-   --   -ldl
+   --   -Xlinker
+   --   --stack=0x200000,0x1000
+   --   -mthreads
+   --   -Wl,--stack=0x2000000
 --  END Object file/option list   
 
 end ada_main;

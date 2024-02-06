@@ -20,58 +20,50 @@ package body linearalloclist is
    begin
       Put("insert procedure running");
       temp := last;
-         while temp >= first and then msgFoodType > GetFoodType(list(temp)) loop 
+         while first < temp and then msgFoodType < GetFoodType(list(temp)) loop 
             list(temp+1) := list(temp);
          temp := temp-1;
          end loop;
          if temp = last then
-            list(last+1) := msg;
+         list(last+1) := msg;
+         Put_Line("     inserted in last position");
          elsif temp < first then
-            list(first) := msg;
+         list(first) := msg;
+         Put_Line("     inserted in first position");
          else 
-            list(temp+1) := msg;
+         list(temp+1) := msg;
+         Put_Line("     inserted in middle position");
          end if;
          last := last +1;
       end insert;
      
    procedure remove(msg: in out message) is
-      index : slotindex := 0;
+      low: slotindex := lower_bound;
+      high: slotindex := last-1;
+      mid : slotindex;
       found : Boolean := False;
-   begin      
-      index := get(msg);
-      if index /= slotindex'Last then
-         if GetFoodType(list(index)) = GetFoodType(msg) then
-            found := True;
-         for i in index..last - 2 loop
-            list(i) := list(i + 1);
-         end loop;
-            last := last - 1;
-         end if;
-      end if;
-
-      end remove;
-   
-function get(msg : message) return slotindex is
-   low : slotindex := lower_bound;
-   high : slotindex := last - 1; 
-   mid : slotindex;
-   currentFoodType : Food_Type;
-begin
-   while low <= high loop
-      mid := (low + high) / 2;
-
-      currentFoodType := GetFoodType(list(mid));
-      if currentFoodType < GetFoodType(msg) then
-         low := mid + 1;
-      elsif currentFoodType > GetFoodType(msg) then
-         high := mid - 1;
+      
+   begin
+      while low <= high loop
+         mid := ((low+high)/2);
+      if GetFoodType(list(mid)) < GetFoodType(msg) then    
+            low := mid+1;
+      elsif GetFoodType(list(mid)) > GetFoodType(msg) then
+           high := mid-1;
       else
-         return mid;
+           found := true;
+         end if;
+      end loop;
+      
+      if found then 
+         msg := list(mid);
+         for i in mid..last -2 loop
+            list(i) := list(i+1);
+         end loop;
+         last := last-1;
       end if;
-   end loop;
-
-   return slotindex'Last; 
-end get;
+   end remove;   
+      
    
    function isFull return Boolean is
       begin
