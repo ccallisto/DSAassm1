@@ -10,14 +10,15 @@ package body linearalloclist is
    use IntIO;
    first, last, temp, index: slotindex := 0;
    list: array(slotindex) of message;
-   max : natural := capacity -1;
-   lower_bound : slotindex := first;
-   upper_bound :slotindex := last;
+   max : natural;
 
+   useCapacity : Natural;
    procedure insert(msg: in message) is
       msgFoodType : Food_Type := GetFoodType(msg);
       temp : slotindex;
    begin
+      useCapacity := GetOperationalCapacity;
+      max := useCapacity-1;
       Put("insert procedure running");
       temp := last;
          while first < temp and then msgFoodType < GetFoodType(list(temp)) loop 
@@ -38,11 +39,12 @@ package body linearalloclist is
       end insert;
      
    procedure remove(msg: in out message; desiredFood: Food_Type) is
-   low: slotindex := lower_bound;
-   high: slotindex := last;
+   low: slotindex := 0;
+   high: slotindex := GetOperationalCapacity-1;
    mid : slotindex;
    found : Boolean := False;
    inmessg : message := msg;
+
 begin
    Put_Line("Starting removal process...");
    --  Put("List state before removal: ");
@@ -87,7 +89,9 @@ end remove;
       
    
    function isFull return Boolean is
-      begin
+      
+   begin
+      max := GetOperationalCapacity;
       if last = max then
          return True;
       else
@@ -96,7 +100,7 @@ end remove;
       end isFull;
    
    function isEmpty return Boolean is
-      begin
+   begin
       if last = first then
       return True;
       else
@@ -104,4 +108,17 @@ end remove;
       end if;
       end isEmpty;
    
+       function GetOperationalCapacity return Natural is
+   begin
+      return OperationalCapacity;
+   end GetOperationalCapacity;
+
+   procedure SetOperationalCapacity(NewCapacity: in Natural) is
+   begin
+      if NewCapacity <= Capacity then
+         OperationalCapacity := NewCapacity;
+      else
+         raise Constraint_Error;
+      end if;
+   end SetOperationalCapacity;
 end linearalloclist;

@@ -1,86 +1,26 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
-    <vfs_file />
-    <file_marker column=" 1" line=" 57" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
+    <vfs_file>/home/callisto/Desktop/DataStructures/DSAassm1/fooddistributionservice.gpr</vfs_file>
+    <file_marker column=" 3" line=" 8" >
+      <vfs_project>/home/callisto/Desktop/DataStructures/DSAassm1/fooddistributionservice.gpr</vfs_project>
+      <vfs_file>/home/callisto/Desktop/DataStructures/DSAassm1/src/gatekeeperservice.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 36" line=" 8" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/linearalloclist.ads</vfs_file>
+    <file_marker column=" 1" line=" 14" >
+      <vfs_project>/home/callisto/Desktop/DataStructures/DSAassm1/fooddistributionservice.gpr</vfs_project>
+      <vfs_file>/home/callisto/Desktop/DataStructures/DSAassm1/src/gatekeeperservice.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 21" line=" 66" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/linearalloclist.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
+    <file_marker column=" 7" line=" 40" >
+      <vfs_project>/home/callisto/Desktop/DataStructures/DSAassm1/fooddistributionservice.gpr</vfs_project>
+      <vfs_file>/home/callisto/Desktop/DataStructures/DSAassm1/src/linearalloclist.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/linearalloclist.adb</vfs_file>
+      <vfs_project>/home/callisto/Desktop/DataStructures/DSAassm1/fooddistributionservice.gpr</vfs_project>
+      <vfs_file>/home/callisto/Desktop/DataStructures/DSAassm1/src/linearalloclist.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/linearalloclist.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 22" line=" 16" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 8" line=" 17" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 12" line=" 16" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 11" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 34" line=" 16" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 8" line=" 17" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 12" line=" 16" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 8" line=" 17" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 41" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/productdistributionmain.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 41" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/food_salesservice.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 41" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/gatekeeperservice.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
-      <vfs_project>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/fooddistributionservice.gpr</vfs_project>
-      <vfs_file>/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/src/distribution_service.adb</vfs_file>
+    <file_marker current="true" column=" 1" line=" 34" >
+      <vfs_project>/home/callisto/Desktop/DataStructures/DSAassm1/fooddistributionservice.gpr</vfs_project>
+      <vfs_file>/home/callisto/Desktop/DataStructures/DSAassm1/src/productdistributionmain.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >

@@ -14,7 +14,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U linearalloclist%b	linearalloclist.adb	fc474e79 NE OO PK GE IL
+U linearalloclist%b	linearalloclist.adb	9b74dadc NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -37,7 +37,7 @@ Z system.val_int%s	s-valint.ads		s-valint.ali
 Z system.val_lli%s	s-vallli.ads		s-vallli.ali
 Z system.val_llli%s	s-valllli.ads		s-valllli.ali
 
-U linearalloclist%s	linearalloclist.ads	af26f547 BN EE NE OO PK GE IL
+U linearalloclist%s	linearalloclist.ads	11d5478d BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -69,14 +69,14 @@ D a-tiinau.adb		20231205000000 199a0c7a ada.text_io.integer_aux%b
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D food_datastructures.ads  20240206153217 a9838647 food_datastructures%s
-D gatekeeperservice.ads	20240206153217 9ebc258e gatekeeperservice%s
+D food_datastructures.ads  20240221152530 a9838647 food_datastructures%s
+D gatekeeperservice.ads	20240221152530 9ebc258e gatekeeperservice%s
 D interfac.ads		20231205000000 15f799c2 interfaces%s
 D i-c.ads		20231205000000 5c5a6c17 interfaces.c%s
 D i-cstrea.ads		20231205000000 e53d8b8e interfaces.c_streams%s
-D linearalloclist.ads	20240206191723 5a891253 linearalloclist%s
-D linearalloclist.adb	20240206193508 91f1ffe3 linearalloclist%b
-D stats_fooddistribution.ads  20240206153217 5bb684b5 stats_fooddistribution%s
+D linearalloclist.ads	20240221155304 e47aa099 linearalloclist%s
+D linearalloclist.adb	20240221161356 4831d98c linearalloclist%b
+D stats_fooddistribution.ads  20240221152530 5bb684b5 stats_fooddistribution%s
 D system.ads		20231205000000 426dafb8 system%s
 D s-atacco.ads		20231205000000 903317eb system.address_to_access_conversions%s
 D s-assert.ads		20231205000000 9c4520c7 system.assertions%s
@@ -134,55 +134,58 @@ D s-widllu.ads		20231205000000 a6620b19 system.wid_llu%s
 D s-widuns.ads		20231205000000 866a5800 system.wid_uns%s
 D s-widthu.ads		20231205000000 b32f15e2 system.width_u%s
 G a e
-G c Z s b [linearalloclist standard 6 9 none]
+G c Z s b [linearalloclist standard 7 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 32|1r6 1r23 33|9r25
 X 18 a-textio.ads
 58K13*Text_IO 787e16 32|1w10 1r27 33|9r29
-519U14*Put 33|21s7 79s10
-566U14*Put_Line 33|47s4 63s13 71s7 76s7 79s86
+519U14*Put 33|22s7 81s10
+566U14*Put_Line 33|49s4 65s13 73s7 78s7 81s86
 X 24 a-tiinio.ads
 46k21*Integer_IO 114e27 33|9r37
 X 27 food_datastructures.ads
 5K9*Food_DataStructures 41e25 32|2w6 2r31 33|1w6 2r5
-9E9*Food_Type 9e93 32|5r54 10r56 33|18r21 40r55 79r59
-33U14*PrintFoodType 33|79s45
+9E9*Food_Type 9e93 32|5r54 11r56 33|17r21 41r55 81r59
+33U14*PrintFoodType 33|81s45
 X 28 gatekeeperservice.ads
 4K9*GateKeeperService 15e22 33|3w6 4r5
 X 32 linearalloclist.ads
-4+9 message 5r38 9r30 10r34 33|12r30 17r29 40r33 45r14
-5V18 GetFoodType{27|9E9} 5>30 33|18s34 23s52 57s10 59s13
+4+9 message 5r38 10r30 11r34 33|12r30 16r29 41r33 46r14
+5V18 GetFoodType{27|9E9} 5>30 33|17s34 24s52 59s10 61s13
 5*30 msg{4+9}
-6k9*linearalloclist 4z9 5z18 13l5 13e20 33|6b14 107l5 107t20
-7i5*capacity{natural} 8r45 33|13r21
-8I13*slotindex{natural} 33|11r30 12r16 14r18 15r17 19r14 41r9 42r10 43r10
-9U15*insert 9>22 33|17b14 38l11 38t17
-9*22 msg{4+9} 33|17b21 18r46 28r26 31r25 34r26
-10U15*remove 10=22 10>43 33|40b14 85l5 85t11
-10*22 msg{4+9} 33|40b21 45r25 64m13 80m10
-10e43 desiredFood{27|9E9} 33|40b42 57r35 59r38 79r70
-11V14*isFull{boolean} 33|89b13 96l11 96t17
-12V14*isEmpty{boolean} 33|98b13 105l11 105t18
+6i4 capacity{natural} 9r45 17r36 33|118r25
+7k9*linearalloclist 4z9 5z18 6z4 18l5 18e20 33|6b14 124l5 124t20
+9I13*slotindex{natural} 33|11r30 12r16 18r14 42r9 43r10 44r10
+10U15*insert 10>22 33|16b14 39l11 39t17
+10*22 msg{4+9} 33|16b21 17r46 29r26 32r25 35r26
+11U15*remove 11=22 11>43 33|41b14 87l5 87t11
+11*22 msg{4+9} 33|41b21 46r25 66m13 82m10
+11e43 desiredFood{27|9E9} 33|41b42 59r35 61r38 81r70
+12V14*isFull{boolean} 33|91b13 100l11 100t17
+13V14*isEmpty{boolean} 33|102b13 109l11 109t18
+14V14*GetOperationalCapacity{natural} 33|20s22 43s23 94s14 111b17 114l8 114t30
+15U15*SetOperationalCapacity 15>38 33|116b14 123l8 123t30
+15i38 NewCapacity{natural} 33|116b37 118r10 119r33
+17i4*OperationalCapacity{natural} 33|113r14 119m10
 X 33 linearalloclist.adb
 9K12 IntIO[24|46] 10r8
-11i4 first{32|8I13} 14r31 23r16 30r23 31r15 100r17
-11i11 last{32|8I13} 15r30 22r15 27r20 28r15 37m10 37r18 42r23 72r21 75m7
-. 75r15 80r22 91r10 100r10
-11i17 temp{32|8I13}
-11i23 index{32|8I13}
-12a4 list(32|4+9) 23r64 24m13 24r29 28m10 31m10 34m10 57r22 59r25 64r20 73m10
-. 73r21 80r17
-13i4 max{natural} 91r17
-14i4 lower_bound{32|8I13} 41r22
-15i4 upper_bound{32|8I13}
-18e7 msgFoodType{27|9E9} 23r38
-19i7 temp{32|8I13} 22m7 23r24 23r69 24r18 24r34 25m10 25r18 27r13 30r16 34r15
-41i4 low{32|8I13} 53r10 54r15 58m10
-42i4 high{32|8I13} 53r17 54r21 60m10
-43i4 mid{32|8I13} 54m7 57r27 58r17 59r30 60r18 64r25 72r16
-44b4 found{boolean} 62m10 69r7
-45*4 inmessg{32|4+9}
-72i11 i{integer} 73r15 73r26
+11i4 first{32|9I13} 24r16 31r23 32r15 104r17
+11i11 last{32|9I13} 23r15 28r20 29r15 38m10 38r18 74r21 77m7 77r15 82r22
+. 95r10 104r10
+11i17 temp{32|9I13}
+11i23 index{32|9I13}
+12a4 list(32|4+9) 24r64 25m13 25r29 29m10 32m10 35m10 59r22 61r25 66r20 75m10
+. 75r21 82r17
+13i4 max{natural} 21m7 94m7 95r17
+15i4 useCapacity{natural} 20m7 21r14
+17e7 msgFoodType{27|9E9} 24r38
+18i7 temp{32|9I13} 23m7 24r24 24r69 25r18 25r34 26m10 26r18 28r13 31r16 35r15
+42i4 low{32|9I13} 55r10 56r15 60m10
+43i4 high{32|9I13} 55r17 56r21 62m10
+44i4 mid{32|9I13} 56m7 59r27 60r17 61r30 62r18 66r25 74r16
+45b4 found{boolean} 64m10 71r7
+46*4 inmessg{32|4+9}
+74i11 i{integer} 75r15 75r26
 X 64 s-stausa.ads
 207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22
 272U14*Output_Results 276i<c,__gnat_stack_usage_output_results>22

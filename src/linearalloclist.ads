@@ -3,11 +3,16 @@ with Food_DataStructures; use Food_DataStructures;
 generic
    type message is private;
    with function GetFoodType(msg: in message) return Food_Type is <>;
+   capacity: Natural;
 package linearalloclist is
-    capacity: Natural := 21;
+
     subtype slotindex is Natural range 0 .. capacity - 1;
     procedure insert(msg: in message);
     procedure remove(msg: in out message; desiredFood: Food_Type);
     function isFull return Boolean;
     function isEmpty return Boolean;
+    function GetOperationalCapacity return Natural;
+    procedure SetOperationalCapacity(NewCapacity: in Natural);
+
+   OperationalCapacity: Natural := Capacity;
 end linearalloclist;

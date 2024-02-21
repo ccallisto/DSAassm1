@@ -13,19 +13,24 @@ package body GateKeeperService is
       return getFood_PackFoodType(msg);
    end GetFoodType;
       
-   package FoodList is new linearalloclist(Food_Pack, GetFoodType);
+   package FoodList is new linearalloclist(Food_Pack, GetFoodType, Capacity => 50);
    use FoodList;
 
+   
+   procedure makelist(Capacity: Natural) is begin
+    FoodList.SetOperationalCapacity(Capacity);
+   end makelist;
    rejected: Integer := 0;
 
    MgtDesiredFoodTypeToSell: Food_Type;
 
    Start_Time: Ada.Calendar.Time;
    End_Time:   Ada.Calendar.Time;
-
+   newCapacity : Natural;
    begin
-   
-
+      put("Input Operational Capacity");
+      get(newCapacity); new_line(2);
+      makelist(newCapacity);
       delay 0.5;  
       Start_Time := Ada.Calendar.Clock;
       End_Time := Start_Time + 1.0 * 8.0 * 5.0; 

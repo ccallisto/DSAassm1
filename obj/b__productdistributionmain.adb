@@ -312,7 +312,7 @@ package body ada_main is
       E255 := E255 + 1;
       Gatekeeperservice'Elab_Spec;
       E193 := E193 + 1;
-      Gatekeeperservice'Elab_Body;
+      gatekeeperservice'elab_body;
       E191 := E191 + 1;
       Distribution_Service'Elab_Body;
       E136 := E136 + 1;
@@ -355,15 +355,15 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/food_datastructures.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/stats_fooddistribution.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/linearalloclist.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/gatekeeperservice.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/distribution_service.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/food_salesservice.o
-   --   /home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/productdistributionmain.o
-   --   -L/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/
-   --   -L/home/callisto/Desktop/DataStructures/Assignment1/DataStructuresFoodDistributionService/DSAassm1/obj/
+   --   /home/callisto/Desktop/DataStructures/DSAassm1/obj/food_datastructures.o
+   --   /home/callisto/Desktop/DataStructures/DSAassm1/obj/stats_fooddistribution.o
+   --   /home/callisto/Desktop/DataStructures/DSAassm1/obj/linearalloclist.o
+   --   /home/callisto/Desktop/DataStructures/DSAassm1/obj/gatekeeperservice.o
+   --   /home/callisto/Desktop/DataStructures/DSAassm1/obj/distribution_service.o
+   --   /home/callisto/Desktop/DataStructures/DSAassm1/obj/food_salesservice.o
+   --   /home/callisto/Desktop/DataStructures/DSAassm1/obj/productdistributionmain.o
+   --   -L/home/callisto/Desktop/DataStructures/DSAassm1/obj/
+   --   -L/home/callisto/Desktop/DataStructures/DSAassm1/obj/
    --   -L/usr/lib/gcc/x86_64-redhat-linux/13/adalib/
    --   -static
    --   -lgnarl
