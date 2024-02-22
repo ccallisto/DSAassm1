@@ -18,7 +18,6 @@ procedure ProductDistributionMain is
    numProductGenerators: Positive := 1; -- number product generators.
    numPOS: Positive := 2;               -- number points of sale.
 
-   --SalesPerson: RetailSales; -- single sales center.
 
 
 begin --body ProductDistributionMain

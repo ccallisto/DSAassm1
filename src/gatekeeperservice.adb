@@ -5,42 +5,42 @@ with linearalloclist;
 package body GateKeeperService is
    
    package IntegerIO is new Ada.Text_IO.Integer_IO(Integer);  use IntegerIO;
-  
-            
+    initCapacity: Natural; 
    task body GateKeeper is
    function GetFoodType(msg : Food_Pack) return Food_Type is
       begin 
       return getFood_PackFoodType(msg);
    end GetFoodType;
-      
-   package FoodList is new linearalloclist(Food_Pack, GetFoodType, Capacity => 50);
+      function makeCapacity return Natural is
+      begin
+         put ("How much list space?   " );
+           get(initCapacity);
+         New_Line;
+         return initCapacity;
+      end makeCapacity;
+   package FoodList is new linearalloclist(Food_Pack, GetFoodType, makeCapacity);
    use FoodList;
 
    
-   procedure makelist(Capacity: Natural) is begin
-    FoodList.SetOperationalCapacity(Capacity);
-   end makelist;
+
    rejected: Integer := 0;
 
    MgtDesiredFoodTypeToSell: Food_Type;
 
    Start_Time: Ada.Calendar.Time;
    End_Time:   Ada.Calendar.Time;
-   newCapacity : Natural;
    begin
-      put("Input Operational Capacity");
-      get(newCapacity); new_line(2);
-      makelist(newCapacity);
+      
       delay 0.5;  
       Start_Time := Ada.Calendar.Clock;
       End_Time := Start_Time + 1.0 * 8.0 * 5.0; 
-
+      
       while rejected < 5 and Ada.Calendar.Clock < End_Time loop  
 
-
+         
          select
             accept acceptMessage(newFood: in Food_Pack) do
-               if not(FoodList.isFull) then --i think there is a bug here causing the program to not transfer data correctly; fowel seems to get defaulted to and then nothing gets properly removed or sold
+               if not(FoodList.isFull) then
                   FoodList.insert(newFood);
                   put("GateKeeper insert accepted     ");
                   PrintFood_Pack(newFood); new_line;
@@ -53,7 +53,6 @@ package body GateKeeperService is
                end if;
             end acceptMessage;
          or
-            -- Accept request for distribution from sales
             accept retrieveMessage( newFood: out Food_Pack; availableForShipment: out Boolean) do
               availableForShipment := False;
 
@@ -72,7 +71,7 @@ package body GateKeeperService is
             end retrieveMessage;
          end select;
 
-         delay 1.1; -- Complete overhead due to accepting or rejecting a request prior to new iteration.
+         delay 1.1; 
       end loop;
 
       -- print time in service, statistics such as number food pacekets of meat and non-meat products processed.

@@ -11,8 +11,6 @@ package linearalloclist is
     procedure remove(msg: in out message; desiredFood: Food_Type);
     function isFull return Boolean;
     function isEmpty return Boolean;
-    function GetOperationalCapacity return Natural;
-    procedure SetOperationalCapacity(NewCapacity: in Natural);
 
    OperationalCapacity: Natural := Capacity;
 end linearalloclist;

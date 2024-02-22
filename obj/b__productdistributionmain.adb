@@ -312,7 +312,7 @@ package body ada_main is
       E255 := E255 + 1;
       Gatekeeperservice'Elab_Spec;
       E193 := E193 + 1;
-      gatekeeperservice'elab_body;
+      Gatekeeperservice'Elab_Body;
       E191 := E191 + 1;
       Distribution_Service'Elab_Body;
       E136 := E136 + 1;
