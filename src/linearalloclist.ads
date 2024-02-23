@@ -5,8 +5,7 @@ generic
    with function GetFoodType(msg: in message) return Food_Type is <>;
    capacity: Natural;
 package linearalloclist is
-
-    subtype slotindex is Natural range 0 .. capacity - 1;
+    subtype slotindex is Natural range 0 .. capacity;
     procedure insert(msg: in message);
     procedure remove(msg: in out message; desiredFood: Food_Type);
     function isFull return Boolean;

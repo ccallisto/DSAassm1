@@ -8,7 +8,8 @@ package body linearalloclist is
         
    package IntIO is new Ada.Text_IO.Integer_IO(Integer);
    use IntIO;
-   first, last, temp, index: slotindex := 0;
+   temp, index, last: slotindex:= 0;
+   first : slotindex :=1;
    list: array(slotindex) of message;
    max : natural;
 
@@ -37,8 +38,8 @@ package body linearalloclist is
       end insert;
      
    procedure remove(msg: in out message; desiredFood: Food_Type) is
-   low: slotindex := 0;
-   high: slotindex := Capacity-1;
+   low: slotindex := 1;
+   high: slotindex := last;
    mid : slotindex;
    found : Boolean := False;
    inmessg : message := msg;
@@ -69,19 +70,16 @@ begin
    if found then
       -- Item found, proceed to remove it by shifting elements
       --  Put_Line("Item found, removing...");
-      for i in mid..last - 1 loop
+      for i in mid..last  loop
          list(i) := list(i + 1);
       end loop;
-      last := last - 1; -- Update the last index since an item is removed
-      --  Put_Line("Item removed successfully.");
-   else
-      -- Item not found, handle according to your specific requirements
+      last := last - 1;
+         else
          Put("sorry, no food packets of  ");PrintFoodType(Food_Type( desiredfood )); Put_Line(" are currently available");
          msg := list(last);
+         last := last-1;
    end if;
    
-   --  Put("List state after removal: ");
-   -- Assuming again you have a way to print the list or relevant details.
 end remove;
 
       
