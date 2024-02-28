@@ -44,6 +44,7 @@ package body GateKeeperService is
                   FoodList.insert(newFood);
                   put("GateKeeper insert accepted     ");
                   PrintFood_Pack(newFood); new_line;
+                  FoodList.printlist;
                else
                   rejected := rejected + 1;
                   put(" Rejected by GateKeeper: "); new_line;
@@ -56,7 +57,6 @@ package body GateKeeperService is
             accept retrieveMessage( newFood: out Food_Pack; availableForShipment: out Boolean) do
               availableForShipment := False;
 
-              if not(FoodList.isEmpty) then
                  availableForShipment := True;
                  MgtDesiredFoodTypeToSell := RandomFoodType;
                  FoodList.remove(newFood, MgtDesiredFoodTypeToSell);
@@ -67,7 +67,7 @@ package body GateKeeperService is
                  put(" Actual type sold is: ");  PrintFood_PackType( newFood ); new_line;
                  PrintFood_PackShipment( newFood );
                  put("Food pack removed by GateKeeper for shipment."); new_line(2);
-              end if;
+                 FoodList.printlist;
             end retrieveMessage;
          end select;
 

@@ -9,7 +9,8 @@ package body linearalloclist is
    package IntIO is new Ada.Text_IO.Integer_IO(Integer);
    use IntIO;
    temp, index, last: slotindex:= 0;
-   first : slotindex :=1;
+   first, low : slotindex :=1;
+   mid, high: slotindex;
    list: array(slotindex) of message;
 
 
@@ -30,19 +31,19 @@ package body linearalloclist is
          else 
          list(temp+1) := msg;
          end if;
-         last := last +1;
+        last := last +1;
+        --  printlist;
+
       end insert;
      
    procedure remove(msg: in out message; desiredFood: Food_Type) is
-   low: slotindex := 1;
-   high: slotindex := last;
-   mid : slotindex;
+
    found : Boolean := False;
    inmessg : message := msg;
 
 begin
-
-   
+      if not isEmpty then
+   high := last;
    while low <= high loop
       mid := (low + high) / 2;
       
@@ -61,13 +62,18 @@ begin
       for i in mid..last  loop
          list(i) := list(i + 1);
       end loop;
-      last := last - 1;
+            last := last - 1;
+        --  printlist;
+
          else
          Put("sorry, no food packets of  ");PrintFoodType(Food_Type( desiredfood )); Put_Line(" are currently available");
          msg := list(last);
-         last := last-1;
-   end if;
-   
+            last := last-1;
+       --  printlist;
+
+         end if;
+
+  end if;
 end remove;
 
       
@@ -92,5 +98,16 @@ end remove;
       end if;
       end isEmpty;
    
+   procedure printlist is
+            printFood : Food_Type;
+   begin
+      for i in first..last loop
+         printFood := GetFoodType(list(i));
+                  put ("[");
+         PrintFoodType(printFood);
+         put("]");
+      end loop;
+      new_line;
+end printlist;
 
 end linearalloclist;
