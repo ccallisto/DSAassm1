@@ -36,8 +36,8 @@ package body ada_main is
    E129 : Short_Integer; pragma Import (Ada, E129, "ada__finalization_E");
    E128 : Short_Integer; pragma Import (Ada, E128, "system__file_io_E");
    E215 : Short_Integer; pragma Import (Ada, E215, "system__task_info_E");
-   E140 : Short_Integer; pragma Import (Ada, E140, "ada__calendar_E");
-   E138 : Short_Integer; pragma Import (Ada, E138, "ada__calendar__delays_E");
+   E138 : Short_Integer; pragma Import (Ada, E138, "ada__calendar_E");
+   E142 : Short_Integer; pragma Import (Ada, E142, "ada__calendar__delays_E");
    E118 : Short_Integer; pragma Import (Ada, E118, "ada__text_io_E");
    E184 : Short_Integer; pragma Import (Ada, E184, "system__random_seed_E");
    E172 : Short_Integer; pragma Import (Ada, E172, "system__img_llli_E");
@@ -277,9 +277,9 @@ package body ada_main is
       E215 := E215 + 1;
       Ada.Calendar'Elab_Spec;
       Ada.Calendar'Elab_Body;
-      E140 := E140 + 1;
-      Ada.Calendar.Delays'Elab_Body;
       E138 := E138 + 1;
+      Ada.Calendar.Delays'Elab_Body;
+      E142 := E142 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E118 := E118 + 1;

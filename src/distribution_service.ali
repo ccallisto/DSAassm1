@@ -66,7 +66,7 @@ D a-tiflio.ads		20231205000000 9fe024a2 ada.text_io.float_io%s
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
 D distribution_service.ads  20240222222918 e4fa9b10 distribution_service%s
-D distribution_service.adb  20240222221841 eeea48ce distribution_service%b
+D distribution_service.adb  20240223205124 eeea48ce distribution_service%b
 D food_datastructures.ads  20240222212227 a9838647 food_datastructures%s
 D gatekeeperservice.ads	20240222212227 9ebc258e gatekeeperservice%s
 D interfac.ads		20231205000000 15f799c2 interfaces%s

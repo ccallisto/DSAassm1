@@ -79,7 +79,7 @@ D a-tiinau.adb		20231205000000 199a0c7a ada.text_io.integer_aux%b
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-tiinio.adb		20231205000000 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D distribution_service.ads  20240222212227 e4fa9b10 distribution_service%s
+D distribution_service.ads  20240222222918 e4fa9b10 distribution_service%s
 D food_datastructures.ads  20240222212227 a9838647 food_datastructures%s
 D food_salesservice.ads	20240222212227 ef36e4fb food_salesservice%s
 D gatekeeperservice.ads	20240222212227 9ebc258e gatekeeperservice%s

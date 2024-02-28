@@ -39,7 +39,7 @@ package body Distribution_Service is
 
         GateKeeper.acceptMessage( newFood ); --moved into gatekeeper
 
-        -- Schedule arrival of next star ship exponentially distributed over 1.534 seconds (hours).
+        -- Schedule arrival of next star ship exponentially distributed over 1.534 second
         nextArrivalDelay := Next_Exponential;
 
         nextArrivalDelay := nextArrivalDelay * 1.534;  -- Food cargo vessels arrive every 1.534 hours

@@ -5,6 +5,7 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_CALENDAR
 RV NO_DELAY
 RV NO_FIXED_POINT
 RV NO_FLOATING_POINT
@@ -17,8 +18,9 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U distribution_service%b  distribution_service.adb  4ba1946d OO PK
+U distribution_service%b  distribution_service.adb  9fe445ca OO PK
 W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -67,8 +69,8 @@ D a-tienio.ads		20231205000000 107ce547 ada.text_io.enumeration_io%s
 D a-tiflio.ads		20231205000000 9fe024a2 ada.text_io.float_io%s
 D a-tiinio.ads		20231205000000 e58fa6fb ada.text_io.integer_io%s
 D a-unccon.ads		20231205000000 0e9b276f ada.unchecked_conversion%s
-D distribution_service.ads  20240222212227 e4fa9b10 distribution_service%s
-D distribution_service.adb  20240222212227 cff3c9ca distribution_service%b
+D distribution_service.ads  20240222222918 e4fa9b10 distribution_service%s
+D distribution_service.adb  20240223205124 eeea48ce distribution_service%b
 D food_datastructures.ads  20240222212227 a9838647 food_datastructures%s
 D gatekeeperservice.ads	20240222212227 9ebc258e gatekeeperservice%s
 D interfac.ads		20231205000000 15f799c2 interfaces%s
@@ -119,49 +121,52 @@ G r c none [product_generator distribution_service 6 14 none] [printfood_packshi
 G r r none [product_generator distribution_service 6 14 none] [acceptmessage gatekeeperservice__gatekeeper 8 13 none]
 G r c none [product_generator distribution_service 6 14 none] [next_exponential stats_fooddistribution 14 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 24|4r6 4r23 5r6 5r33 5r46 5r65 6r6 6r33 6r46 6r65
+16K9*Ada 20e8 24|4r6 4r23 5r6 5r33 5r46 5r65 5r86 6r5 6r32 6r45 6r64
+X 2 a-calend.ads
+36K13*Calendar 413e17 24|5w90
 X 6 a-flteio.ads
-20K13*Float_Text_IO[20|46] 24|5w50 6r50
+20K13*Float_Text_IO[20|46] 24|5w50 6r49
 X 7 a-inteio.ads
-18K13*Integer_Text_IO[21|46] 24|5w69 6r69
+18K13*Integer_Text_IO[21|46] 24|5w69 6r68
 X 9 a-numeri.ads
-16K13*Numerics 35e17 24|5r10 6r10
+16K13*Numerics 35e17 24|5r10 6r9
 X 11 a-nuflra.ads
-41K22*Float_Random 74e30 24|5w19 6r19
-47R9*Generator<43|65R9> 24|11r33
+41K22*Float_Random 74e30 24|5w19 6r18
+47R9*Generator<43|65R9> 24|11r29
+53U14*Reset<43|103p14> 24|19s5
 X 18 a-textio.ads
-58K13*Text_IO 787e16 24|4w10 4r27 5w37 6r37
-282U14*New_Line 24|36s65 52s10
-519U14*Put 24|36s44 51s10 51s70
+58K13*Text_IO 787e16 24|4w10 4r27 5w37 6r36
+282U14*New_Line 24|38s64 47s9
+519U14*Put 24|38s43 46s9 46s69
 X 20 a-tiflio.ads
-85U14*Put 24|51s47[6|20]
+85U14*Put 24|46s46[6|20]
 X 23 distribution_service.ads
-4K9*Distribution_Service 9l5 9e25 24|8b14 63l6 63t26
-6T14*Product_Generator 24|10b13 61l8 61t25
+4K9*Distribution_Service 9l5 9e25 24|8b14 57l5 57t25
+6T14*Product_Generator 24|10b13 55l7 55t24
 X 24 distribution_service.adb
-11r9 RandFloatGenerator{11|47R9}
-12f9 randFloat{float}
-14r9 newFood{25|15R9} 23m32 23r32 24r34 25m35 25r35 27m35 27r35 30r35 36r33
-. 43r36
-16f9 nextArrivalDelay{float} 48m10 50m10 50r30 51r51 56r35
+11r5 RandFloatGenerator{11|47R9} 19r11
+12f5 randFloat{float}
+14r5 newFood{25|15R9} 25m31 25r31 26r33 27m34 27r34 29m34 29r34 32r34 38r32
+. 40r35
+16f5 nextArrivalDelay{float} 43m9 45m9 45r29 46r50 51r34
 X 25 food_datastructures.ads
-5K9*Food_DataStructures 23|1w6 1r31 24|1w6 1r31 23r41 25|41e25
-10E12*GrainVegetable{9E9} 24|24r46 30r47
-15R9*Food_Pack 24|14r18 25|39e14
-22U14*PrintFood_PackShipment 24|36s10
-24V14*getFood_PackFoodType{9E9} 24|24s13 30s13
-28U14*setFood_PackFoodType 24|23s10
-30U14*setFood_PackShipment 24|25s13 27s13
-32V13*RandomFoodType{9E9} 24|23s61
+5K9*Food_DataStructures 23|1w6 1r31 24|1w6 1r31 25r40 25|41e25
+10E12*GrainVegetable{9E9} 24|26r45 32r46
+15R9*Food_Pack 24|14r14 25|39e14
+22U14*PrintFood_PackShipment 24|38s9
+24V14*getFood_PackFoodType{9E9} 24|26s12 32s12
+28U14*setFood_PackFoodType 24|25s9
+30U14*setFood_PackShipment 24|27s12 29s12
+32V13*RandomFoodType{9E9} 24|25s60
 X 26 gatekeeperservice.ads
 4K9*GateKeeperService 24|2w6 2r30 26|15e22
-6t8*GateKeeper 24|43r10
-8Y13 acceptMessage 24|43s21
+6t8*GateKeeper 24|40r9
+8Y13 acceptMessage 24|40s20
 X 30 stats_fooddistribution.ads
 6K9*Stats_FoodDistribution 23|2w6 2r34 30|21e28
-14V13*Next_Exponential{float} 24|48s30
-17V13*PrepareGrainVegetableFood_PackforSales{duration} 24|31s20
-19V13*PrepareMeatFood_PackforSales{duration} 24|33s20
+14V13*Next_Exponential{float} 24|43s29
+17V13*PrepareGrainVegetableFood_PackforSales{duration} 24|33s19
+19V13*PrepareMeatFood_PackforSales{duration} 24|35s19
 X 47 s-stausa.ads
 207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22
 272U14*Output_Results 276i<c,__gnat_stack_usage_output_results>22
